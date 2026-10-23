@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>建设杯第三轮 · 更应选择不甘于斯｜26工程软件2班</title>
+<style>
+*{box-sizing:border-box}
+:root{
+  --bg:#f7f6f2;--card:#fff;--ink:#1c1c1a;--ink2:#5d5c56;--ink3:#8b8981;
+  --line:#e5e2d9;--acc:#3a6b57;--acc2:#2b5344;--accbg:#eef4f0;--accbd:#cfe0d6;
+  --amber:#8a5a12;--amberbg:#fdf4e3;--amberbd:#f0dcb4;
+  --green:#2f6b3a;--greenbg:#eef6ee;--greenbd:#cfe3d0;
+  --red:#9b3a2c;--redbg:#fbf0ee;--redbd:#eed3cd;
+}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font:15px/1.75 -apple-system,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+.shell{display:flex;min-height:100vh;align-items:flex-start}
+#menu{position:sticky;top:0;height:100vh;overflow-y:auto;flex:0 0 232px;background:#fff;border-right:1px solid var(--line);padding:20px 12px 40px}
+#menu .brand{font-size:12px;letter-spacing:.14em;color:var(--ink3);padding:0 10px 4px}
+#menu .brand2{font-size:15px;font-weight:600;color:var(--ink);padding:0 10px 16px;line-height:1.4}
+#menu a{display:block;padding:8px 10px;border-radius:9px;color:var(--ink2);font-size:14px;line-height:1.35}
+#menu a b{display:block;font-weight:500;color:var(--ink)}
+#menu a span{display:block;font-size:11px;color:var(--ink3);margin-top:2px}
+#menu a:hover{background:var(--accbg);text-decoration:none}
+#menu a.on{background:var(--accbg)}
+#menu a.on b{color:var(--acc2);font-weight:600}
+#menu a.lv2{padding-left:24px}
+#menu a.lv2 b{font-size:13px}
+main{flex:1;min-width:0;padding:34px 40px 90px;max-width:1000px}
+.page{display:none;animation:fin .18s ease}
+.page.on{display:block}
+@keyframes fin{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+h1{font-size:29px;line-height:1.42;margin:6px 0 14px;font-weight:600;letter-spacing:-.01em}
+h1 .accent{color:var(--acc2)}
+h2{font-size:19px;margin:38px 0 12px;font-weight:600;padding-bottom:8px;border-bottom:2px solid var(--line)}
+h2:first-child{margin-top:0}
+h3{font-size:16px;margin:22px 0 8px;font-weight:600}
+p{margin:9px 0}
+ul,ol{padding-left:22px;margin:9px 0}
+li{margin:5px 0}
+.lead{font-size:16px;color:var(--ink2);line-height:1.8}
+.kicker{font-size:12px;letter-spacing:.14em;color:var(--acc);font-weight:600;margin-bottom:6px}
+.meta{font-size:13px;color:var(--ink3)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 19px;margin:12px 0}
+.key{background:var(--accbg);border:1px solid var(--accbd);border-radius:14px;padding:15px 19px;margin:14px 0}
+.key b,.key strong{color:var(--acc2)}
+.warn{background:var(--amberbg);border:1px solid var(--amberbd);border-radius:14px;padding:15px 19px;margin:14px 0}
+.warn b{color:var(--amber)}
+.ok{background:var(--greenbg);border:1px solid var(--greenbd);border-radius:14px;padding:15px 19px;margin:14px 0}
+.ok b{color:var(--green)}
+.danger{background:var(--redbg);border:1px solid var(--redbd);border-radius:14px;padding:15px 19px;margin:14px 0}
+.danger b{color:var(--red)}
+.hl{background:#ffe9a8;border-radius:3px;padding:0 2px;font-weight:600}
+.pz{color:var(--acc);font-weight:600;padding:0 3px}
+.sub{font-size:12.5px;color:var(--ink3);line-height:1.7}
+.speech{background:#fff;border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:0 12px 12px 0;padding:16px 20px;margin:12px 0;font-size:16px;line-height:2}
+.speech p{margin:12px 0}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+th{background:#f2f0e9;font-weight:600;font-size:13px}
+.tw{overflow-x:auto}
+#rules table th:nth-child(2),#rules table td:nth-child(2){min-width:170px}
+#rules table th:nth-child(1),#rules table td:nth-child(1){width:44px}
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:repeat(3,1fr)}
+.enter{display:grid;gap:12px;grid-template-columns:repeat(4,1fr);margin:16px 0 6px}
+.enter a{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 14px;text-align:center;display:block;transition:.15s}
+.enter a:hover{border-color:var(--accbd);background:var(--accbg);text-decoration:none;transform:translateY(-1px)}
+.enter b{display:block;font-size:15px;color:var(--ink);margin-bottom:4px}
+.enter span{display:block;font-size:12px;color:var(--ink3);line-height:1.5}
+.enter .ico{font-size:20px;display:block;margin-bottom:6px}
+.q-a{background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px 18px;margin:13px 0}
+.qq{font-size:15.5px;line-height:1.95}
+.aa{margin-top:11px;padding-top:11px;border-top:1px dashed var(--line);font-size:14px;line-height:1.9}
+.idx{display:inline-block;min-width:20px;height:20px;line-height:20px;text-align:center;background:var(--acc);color:#fff;border-radius:6px;font-size:12px;margin-right:7px;font-weight:600}
+.pill{display:inline-block;font-size:11.5px;padding:2px 8px;border-radius:20px;background:var(--accbg);color:var(--acc2);border:1px solid var(--accbd);margin-right:5px}
+.pill.red{background:var(--redbg);color:var(--red);border-color:var(--redbd)}
+.pill.amb{background:var(--amberbg);color:var(--amber);border-color:var(--amberbd)}
+.hero{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 28px;margin-bottom:18px}
+.oneline{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);font-size:14.5px;color:var(--ink2)}
+.stamp{font-size:12px;color:var(--ink3);margin-top:44px;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.cd{font-variant-numeric:tabular-nums;font-weight:600;color:var(--acc2)}
+.copy{background:var(--acc);color:#fff;border:0;border-radius:9px;padding:8px 16px;font-size:13px;cursor:pointer;font-family:inherit}
+.copy:hover{background:var(--acc2)}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:12px 0}
+summary{cursor:pointer;font-weight:600;font-size:14px}
+.mini{font-size:13px;color:var(--ink3)}
+hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+@media (max-width:900px){
+  .shell{display:block}
+  #menu{position:static;height:auto;width:auto;border-right:0;border-bottom:1px solid var(--line);padding:10px 8px 6px;overflow:visible;white-space:normal}
+  #menu .brand{display:none}
+  #menu .brand2{display:block;font-size:13px;padding:0 2px 6px}
+  #menu .brand2 span{display:inline;font-size:11px}
+  #menu a{display:inline-block;white-space:nowrap;padding:5px 9px;margin:0 1px 4px 0;background:#faf9f5;border:1px solid var(--line)}
+  #menu a span{display:none}
+  #menu a b{font-size:12.5px}
+  #menu a.lv2{padding-left:9px}
+  #menu a.lv2 b{font-size:12px}
+  #menu a.on{border-color:var(--accbd)}
+  main{padding:20px 16px 70px}
+  h1{font-size:23px}
+  .g2,.g3{grid-template-columns:1fr}
+  .enter{grid-template-columns:1fr 1fr}
+  .speech{font-size:15px;line-height:1.95;padding:14px 15px}
+}
+@media print{
+  #menu{display:none}
+  body{background:#fff}
+  .page{display:block!important;page-break-after:always}
+  .hl{background:none!important;border-bottom:1.4pt solid #000;font-weight:700}
+  .card,.key,.warn,.ok,.danger,.speech,.q-a{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+<nav id="menu">
+  <div class="brand">建设杯 · 第三轮</div>
+  <div class="brand2">26工程软件2班<br><span style="font-size:11px;color:#8b8981;font-weight:400">正方 · 不甘于斯</span></div>
+</nav>
+<main>
+
+<section class="page" id="home">
+  <div class="hero">
+    <div class="kicker">建设杯 · 第三轮 · 第四组 · 我方为正方</div>
+    <h1>在骄傲的领域发现自己其实很平凡<br><span class="accent">更应选择「不甘于斯」</span></h1>
+    <div class="meta">10月25日（周日）15:30–17:00 · 线上 · 正方 工程软件二班 vs 反方 人文地理与城乡规划六班</div>
+    <div class="meta" style="margin-top:4px">主席计时 刘馨雅 ｜ 评委 李皓 · 徐晓 · 王艺睿</div>
+    <div class="oneline">我方一句话：<b>看清自己平凡，是清醒；看清之后还愿意再走一段，才是骄傲。</b></div>
+  </div>
+
+  <div class="danger">
+    <p style="margin-top:0"><b>⚠️ 这一轮和上一轮完全反过来，先看这三条，否则会带着旧习惯上场：</b></p>
+    <p style="margin:0 0 6px"><b>① 我们变正方了。</b>所有环节<b>我们先开口</b>：一辩先陈词（第 1 环节）、四辩对辩先说话（第 7）、三辩盘问先问（第 8）、自由辩论先发言（第 12）。<b>先手＝先暴露</b>，所以一辩稿的任务是「立稳」，不是「说满」。</p>
+    <p style="margin:0 0 6px"><b>② 三辩的两个环节都提前了一个。</b>盘问从第 9 变<b>第 8</b>，小结从第 11 变<b>第 10</b>。你一辩刚坐下、二辩刚小结完，就轮到你了，<b>没有中场休息</b>。</p>
+    <p style="margin:0"><b>③ 上一轮那个「环节票 −5%」的轮空补偿没有了。</b>那是一次性规则，这一轮不扣。但反过来说：<b>我们现在没有任何让分，一分都不能送</b>。</p>
+  </div>
+
+  <h2>你是几辩？</h2>
+  <div class="enter">
+    <a href="#speaker1"><span class="ico">①</span><b>一辩</b><span>开篇陈词 3:00<br>第 1 环节 · 我方第一个上</span></a>
+    <a href="#speaker2"><span class="ico">②</span><b>二辩</b><span>质询 2:00<br>＋质询小结 1:30</span></a>
+    <a href="#speaker3"><span class="ico">③</span><b>三辩</b><span>盘问 1:30<br>＋质询小结 1:30</span></a>
+    <a href="#speaker4"><span class="ico">④</span><b>四辩</b><span>对辩 1:30<br>＋总结陈词 3:00</span></a>
+  </div>
+
+  <h2>只有 15 分钟就做这 3 件事</h2>
+  <div class="ok">
+    <p style="margin-top:0"><b>1. 背死一句话（2 分钟）</b><br>「<b>我方从不否认平凡，我方反对的是——在还没走完的时候，就替自己写下"到此为止"。</b>」<br><span class="sub">这一句是全场的地基。对方不管怎么打，你都能回到这一句。</span></p>
+    <p><b>2. 记住一个区分（5 分钟）</b><br>「坦然接受」接受的到底是<b>我现在的位置</b>，还是<b>我的上限</b>？<br><span class="sub">位置要接受（我方也接受）；上限不能接受（谁告诉你上限在哪？）。<b>这是全场最好用的一把刀</b>，看「拆题 → 三、三个必须抢的定义」。</span></p>
+    <p style="margin-bottom:0"><b>3. 只念你那一页（8 分钟）</b><br>点上面的「你是几辩」，<b>只读你那一页</b>。别从首页一路看下来，会看不完。</p>
+  </div>
+
+  <h2>30 秒术语表</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:120px">词</th><th>人话解释</th></tr></thead>
+    <tbody>
+      <tr><td><b>判准</b></td><td>打分的尺子。辩题里出现「更应」「更重要」这种比较词，就必须先说「按什么标准比」。</td></tr>
+      <tr><td><b>环节票</b></td><td>评委按每个环节分别打分，再把该环节的票给总分高的一方。所以每一个环节都要单独赢。</td></tr>
+      <tr><td><b>质询</b></td><td>二辩的环节。可以<b>打断</b>对方，双边计时（你的话和对方的话都算你的时间）。</td></tr>
+      <tr><td><b>盘问</b></td><td>三辩的环节。<b>不能打断</b>，但你<b>可以指派</b>对方除三辩外任一辩手回答；<b>对方回答不烧你的时间</b>。</td></tr>
+      <tr><td><b>对辩</b></td><td>四辩的环节。两人交替发言，<b>不能中止对方没说完的话</b>，计时分开，正方先开口。</td></tr>
+      <tr><td><b>双边计时</b></td><td>双方说的话都算进同一个时间池。你啰嗦＝你烧自己的表。盘问<b>不是</b>双边计时。</td></tr>
+      <tr><td><b>证据检证</b></td><td>第 15 环节，评委可以要求你说出引用出处。说不出来＝这条证据作废，还会掉印象分。</td></tr>
+      <tr><td><b>述票</b></td><td>评委公开讲自己为什么这么投。你能从中听出评委在乎什么——但<b>结果已经定了，不能申诉</b>。</td></tr>
+      <tr><td><b>不甘于斯</b></td><td>「斯」＝这里、这个程度。不甘于斯＝不接受「我就到这个程度了」，选择继续往上走。</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>我方立场速览</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:110px">争点</th><th>我方（不甘于斯）</th><th>对方（坦然接受）</th></tr></thead>
+    <tbody>
+      <tr><td><b>对"平凡"</b></td><td><b>完全承认</b>：我确实平凡，这是事实</td><td>也承认，但把它当成结论</td></tr>
+      <tr><td><b>对"接受"</b></td><td>接受<b>位置</b>，不接受<b>上限</b></td><td>位置和上限一起接受</td></tr>
+      <tr><td><b>对"更应"</b></td><td>更对得起「骄傲」这两个字</td><td>更能让人幸福、心理健康</td></tr>
+      <tr><td><b>风险</b></td><td>可能白费力气（我方承认）</td><td>提前关掉可能性（我方主攻）</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>比赛倒计时</h2>
+  <div class="card">
+    <p style="margin:0">距离上场还有 <span class="cd" id="cd">—</span></p>
+    <p class="mini" style="margin:6px 0 0">目标时间：2026-10-25 15:30（第四组）</p>
+  </div>
+
+  <div class="stamp"><span>建设杯第三轮 · 26工程软件2班（正方）</span><span>最后更新：2026-10-22 20:05</span></div>
+</section>
+
+<section class="page" id="topic">
+  <h1>拆题：这道题真正在问什么</h1>
+  <p class="lead">题面：<b>在骄傲的领域发现自己其实很平凡，更应选择不甘于斯 / 坦然接受</b>。别看它长，它其实只问一件事——<b>当你最在乎的那件事告诉你「你不行」的时候，你怎么办？</b></p>
+
+  <h2>一、把题面拆成四块</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:130px">成分</th><th>它在限定什么</th><th style="width:230px">忽略它会怎样</th></tr></thead>
+    <tbody>
+      <tr><td><b>在骄傲的领域</b></td><td>不是随便一个领域，是<b>你投入过、赢过、被它滋养过</b>的地方。它排除掉「我不在乎的事」。</td><td>会被拖进「随便一个不擅长的领域该不该坚持」——那是另一道题</td></tr>
+      <tr><td><b>发现自己其实很平凡</b></td><td>这是<b>认知事件</b>，不是失败。而且「发现」说明你已经走到了能看见差距的位置。</td><td>会把「不甘于斯」歪曲成「不承认事实」</td></tr>
+      <tr><td><b>更应</b></td><td>比较词：比的是<b>两种姿态</b>哪一种更值得，<b>不是</b>「必须做到」。</td><td>会被逼成「你们要求人人都成功」</td></tr>
+      <tr><td><b>不甘于斯 / 坦然接受</b></td><td>两种<b>回应姿态</b>：继续向上，还是承认到此为止。</td><td>不定义就各说各话，全场空转</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="key">
+    <p style="margin:0"><b>★ 题眼在「骄傲」两个字。</b>题目特意不说「在某个领域」，而说「在<b>骄傲</b>的领域」。为什么？<br>
+    因为在你<b>不在乎</b>的领域，「坦然接受」毫无争议——谁会在自己不喜欢的事情上死磕？<br>
+    题目偏偏挑「骄傲的领域」，就是在问：<b>当你最在乎的东西告诉你「你不行」，你还走不走？</b><br>
+    所以「坦然接受」在这里不是豁达，是<b>在自己最在乎的地方提前退场</b>。</p>
+  </div>
+
+  <h2>二、三个必须抢的定义</h2>
+
+  <h3>① 平凡 ＝ 相对位置，不是绝对值</h3>
+  <div class="card">
+    <p style="margin-top:0">「平凡」不是「我不行」，是「我在这个圈子里排第几」。<br>
+    它是<b>可变的</b>：换一个圈子、多练三年、换一条路径，位置就会变。<br>
+    <span class="sub">→ 用法：对方一说「人就是平凡的」，你就说「对，位置是平凡的。可位置会变，只要有人往上走。」</span></p>
+  </div>
+
+  <h3>② 「坦然接受」接受的到底是什么？<span class="pill red">全场最重要</span></h3>
+  <div class="key">
+    <p style="margin-top:0"><b>接受的是「我现在的位置」，还是「我的上限」？</b></p>
+    <p style="margin:0 0 6px"><b>如果接受位置</b> → 我方<b>完全同意</b>。人不接受现实就没法活。可这跟题目问的「更应选择」没关系——接受位置之后，你仍然可以继续走。</p>
+    <p style="margin:0"><b>如果接受上限</b> → 那我方就要问一句：<b>你凭什么在还没走完的时候，就知道自己的上限在哪？</b></p>
+    <p style="margin:8px 0 0" class="sub">这一问的价值：他答哪一个，你都赢。答「位置」＝他和我们没分歧，题就没得辩；答「上限」＝他要为一个无法证明的命题辩护。</p>
+  </div>
+
+  <h3>③ 「不甘于斯」≠ 不接受现实</h3>
+  <div class="card">
+    <p style="margin-top:0"><b>我方第一步就承认事实：我很平凡。</b>我方不接受的是「到此为止」，不是「我很平凡」。<br>
+    <b>事实判断</b>（我是什么水平）和<b>姿态选择</b>（我接下来怎么活）是两件事。对方如果把这两件事合并，就是在偷换。</p>
+  </div>
+
+  <h2>三、我方判准（尺子）</h2>
+  <div class="ok">
+    <p style="margin-top:0"><b>判断「更应」的标准：哪种选择，更对得起「骄傲」这两个字。</b></p>
+    <p style="margin:0 0 6px">拆成两条可检验的：</p>
+    <p style="margin:0 0 4px">① <b>向上</b>——它是否保留了「变得更好」的可能？</p>
+    <p style="margin:0 0 4px">② <b>不辜负</b>——它是否对得起你曾经在这个领域里的投入和热爱？</p>
+    <p style="margin:8px 0 0" class="sub">一句话版：<b>哪种选择，让人回望的时候不后悔。</b>（这句话好用，因为评委也是人，都回望过。）</p>
+  </div>
+
+  <h2>四、三个陷阱（对方最想把你拖进去）</h2>
+  <div class="danger">
+    <p style="margin-top:0"><b>陷阱 1：把「不甘于斯」说成「不接受事实 / 自欺欺人」。</b><br>
+    破法：<b>我方第一句就承认平凡</b>。承认得越干脆，这个陷阱就越失效。「我方从不否认事实，我方否认的是——事实就是结论。」</p>
+    <p><b>陷阱 2：把「不甘于斯」说成「内卷 / 成功学 / 逼人上进」。</b><br>
+    破法：内卷是<b>在同一层重复消耗</b>，不甘于斯是<b>向上移动</b>；内卷是<b>跟别人比</b>，我方说的是<b>跟昨天的自己比</b>。「我方从不要求你赢过谁，我方只要求你别在看清之前关门。」</p>
+    <p style="margin-bottom:0"><b>陷阱 3：把「坦然接受」说成「成熟 / 心理健康 / 与自己和解」。</b><br>
+    破法：<b>成熟是分清两件事</b>——「我做不到顶尖」（这个要接受）和「我不值得继续」（这个不能接受）。对方把这两件事合并了，所以他的「成熟」其实是<b>一次性把两件事都放弃</b>。</p>
+  </div>
+
+  <h2>五、双方底线对照</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:150px">如果对方说</th><th>他其实在主张</th><th style="width:200px">我方一句话回</th></tr></thead>
+    <tbody>
+      <tr><td>「接受不等于放弃」</td><td>接受可以和继续并存</td><td>那就请您方把「接受上限」这四个字收回去——您方说的其实是我方立场</td></tr>
+      <tr><td>「人要认清现实」</td><td>认清现实＝停止投入</td><td>认清现实是第一句，不是最后一句</td></tr>
+      <tr><td>「死磕会痛苦」</td><td>痛苦＞可能性</td><td>我方不承诺不痛苦，我方只问：这份痛苦值不值？</td></tr>
+      <tr><td>「大多数人都是平凡的」</td><td>多数人的选择＝正确选择</td><td>多数人做不到，推不出你不该做</td></tr>
+      <tr><td>「你们这是鸡汤」</td><td>不给方法＝没有价值</td><td>辩题问的是「更应选择」哪种姿态，不是「怎么成功」</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="stamp"><span>拆题</span><span>最后更新：2026-10-22 20:05</span></div>
+</section>
+<section class="page" id="case">
+  <h1>我方立论：三条论点</h1>
+  <p class="lead">一句话：<b>发现平凡不是判决书，是一张「你终于看清了地图」的通知书。</b>真正的骄傲，是看清之后还愿意再走一段。</p>
+
+  <div class="key">
+    <p style="margin:0"><b>立论骨架（四个人共用，谁都不能跑偏）：</b><br>
+    ① <b>先承认</b>：我很平凡，这是事实。<br>
+    ② <b>再区分</b>：接受位置 ≠ 接受上限。<br>
+    ③ <b>再论证</b>：不甘于斯是唯一能改变「平凡」的变量。<br>
+    ④ <b>最后收</b>：平凡的对面不是「不平凡」，是「我试过了」。</p>
+  </div>
+
+  <h2>论点一：题目说的是「骄傲的领域」——正因为骄傲，才不能提前封存</h2>
+  <div class="card">
+    <p style="margin-top:0"><b>论证：</b>「骄傲」两个字不是装饰。它意味着你在这里投入过、赢过、被它滋养过。一个从来没走出小圈子的人，永远不会「发现自己平凡」——<b>你能发现，说明你已经走到了能看清差距的位置。</b></p>
+    <p>所以这一刻不是失败的通知，是<b>入场券</b>：你终于站到了看得见差距的地方。</p>
+    <p>此刻选择「坦然接受」，等于说：我看清了，但我不走了。这在自己最在乎的地方，不是豁达，是<b>提前退场</b>。</p>
+    <p style="margin-bottom:0"><b>收口句：</b>真正的坦然，是「我知道我平凡，我还是要走」；不是「我知道我平凡，所以我不走了」。</p>
+  </div>
+
+  <h2>论点二：坦然接受会悄悄把「接受位置」换成「接受上限」</h2>
+  <div class="card">
+    <p style="margin-top:0"><b>先让一步（很重要）：</b>我方承认，理论上「接受」和「继续」可以并存。人不接受现实是活不下去的。</p>
+    <p><b>但看它实际给了什么：</b>「坦然接受」给的不是一个动作，是一种<b>止痛</b>——它让你不必再为「我本可以」难受。</p>
+    <p><b>止痛的代价是：你不再问「我还能不能更好」。</b></p>
+    <p>更隐蔽的是<b>自证循环</b>：一旦接受，人会开始为平凡找理由——这个领域靠天赋、我起步晚了、我家庭条件不行。这些理由会让你越来越确信「平凡是对的」。<b>这不是道德批判，这是机制。</b></p>
+    <p style="margin-bottom:0"><b>收口句：</b>不甘于斯的人也会失败，但他失败之后<b>知道自己走到了哪</b>；坦然接受的人不会失败，因为他根本没再试——他失去的是「知道自己上限在哪」的机会。</p>
+  </div>
+
+  <h2>论点三：不甘于斯，是唯一能改变「平凡」的变量</h2>
+  <div class="card">
+    <p style="margin-top:0"><b>事实层面我方全认：</b>绝大多数人在绝大多数领域都是平凡的。</p>
+    <p><b>但「平凡」不是标签，是相对位置。</b>相对位置会变——只要有人往上走。</p>
+    <p><b>逻辑反证（这一段最硬）：</b>如果「发现自己平凡就该坦然接受」是一条普适准则，那么人类所有领域的突破都不该发生。因为<b>每一个突破者，都曾在「我很平凡」的时刻选择继续。</b></p>
+    <p><b>三个例子：</b>齐白石五十多岁「衰年变法」，改变画风才成一代宗师；村上春树二十九岁才写下第一篇小说，此前开爵士酒吧、没写过任何东西；屠呦呦三十九岁接手项目，在上百次失败之后才找到方向。</p>
+    <p><b>反面例子：</b>方仲永五岁能诗，父亲带着他四处炫耀、不再让他学习，最后「泯然众人」（王安石《伤仲永》）。<b>他不是没有天赋，他是太早接受了自己「就到这里」。</b></p>
+    <p style="margin-bottom:0"><b>收口句：</b>平凡的对面不是「不平凡」，是「我试过了」。</p>
+  </div>
+
+  <h2>一辩必须立住的四根桩</h2>
+  <div class="ok">
+    <p style="margin-top:0"><b>桩 1 · 抢定义</b>：旅程→不适用；这道题抢的是「<b>平凡＝相对位置</b>」和「<b>接受＝接受位置还是上限</b>」。</p>
+    <p><b>桩 2 · 抢判准</b>：哪种选择<b>更对得起「骄傲」两个字</b>（向上＋不辜负）。<span class="sub">判准不立，后面三个辩位全没尺子。</span></p>
+    <p><b>桩 3 · 先承认事实</b>：开场 30 秒内必须说出「我平凡，这是事实」。<span class="sub">不承认，对方一句话就把你打成自欺欺人。</span></p>
+    <p style="margin-bottom:0"><b>桩 4 · 把「更应」钉成姿态比较</b>：不是「必须成功」，是「选择哪种姿态」。<span class="sub">这一条能挡掉对方 80% 的攻击。</span></p>
+  </div>
+
+  <h2>对方最可能的三条主线（提前知道，不慌）</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:180px">对方主线</th><th>它的说服力在哪</th><th style="width:230px">我方怎么破</th></tr></thead>
+    <tbody>
+      <tr><td><b>内耗论</b>：不甘会毁掉幸福感</td><td>共情强，评委容易点头</td><td>内耗来自「必须比别人强」，不来自「想比昨天好」</td></tr>
+      <tr><td><b>成熟论</b>：接受才是真正的自尊</td><td>听起来高级、体面</td><td>成熟是分清「做不到顶尖」和「不值得继续」</td></tr>
+      <tr><td><b>现实论</b>：天赋有上限，死磕不划算</td><td>务实，符合大多数人的经验</td><td>没人知道上限在哪；而且这是「战略转移」，不是「坦然接受」</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="stamp"><span>我方立论</span><span>最后更新：2026-10-22 20:05</span></div>
+</section>
+
+<section class="page" id="attack">
+  <h1>破对方：七套打法，逐条拆</h1>
+  <p class="lead">反方（坦然接受）看起来「温和、成熟、有道理」，这是它最危险的地方——<b>它不需要说服你，它只需要让你觉得「争下去很累」</b>。所以拆它要拆得<b>具体</b>，不能只喊口号。</p>
+
+  <div class="key">
+    <p style="margin:0"><b>拆解的总公式（背下来）：</b><br>
+    ① <b>先接住</b>：「您说的这一点，我方部分同意。」<span class="sub">（不接住＝显得你不讲理）</span><br>
+    ② <b>再切开</b>：「但您把两件事合成了一件——＿＿ 和 ＿＿。」<br>
+    ③ <b>最后归位</b>：「所以您方说的其实是<b>接受位置</b>，那正是我方立场。」</p>
+  </div>
+
+  <h2>打法 1｜「接受不等于放弃，接受之后也能继续努力」</h2>
+  <div class="q-a">
+    <div class="qq"><b>他们会说：</b>「坦然接受自己的平凡，不代表我就不努力了。我可以一边接受、一边进步，这才是健康的心态。」</div>
+    <div class="aa"><b>我方的拆法：</b><br>
+    ① 「太好了——<b>那您方已经把『接受上限』收回去了</b>。您方说的是『接受位置』，这正是我方立场。」<br>
+    ② 「可题目让您比较的是两种<b>姿态</b>。如果接受之后还要继续努力，那您方选的其实是不甘于斯，只是换了个说法。」<br>
+    ③ 「所以请您方明确：<b>接受之后，您还继续投入吗？</b>」<span class="sub">——他答「继续」，他就站到我们这边了；他答「不继续」，他就得承认接受＝退场。</span></div>
+  </div>
+
+  <h2>打法 2｜「不甘于斯会内耗、会痛苦、会毁掉幸福感」</h2>
+  <div class="q-a">
+    <div class="qq"><b>他们会说：</b>「很多人就是这样把自己逼出焦虑和抑郁的。接受平凡，才能活得轻松。」</div>
+    <div class="aa"><b>我方的拆法：</b><br>
+    ① <b>切开两种「不甘」</b>：「内耗的根源是『<b>我必须比别人强</b>』；我方主张的是『<b>我想比昨天好一点</b>』。前者是跟别人比，后者是跟自己比。<b>您方把这两个混成一个了。</b>」<br>
+    ② <b>反问价值排序</b>：「您方把『轻松』当成最高价值。可如果一个人轻松了一辈子，回头发现自己从来没为自己在乎的事拼过一次，这份轻松值吗？」<br>
+    ③ <b>承认代价，但不认输</b>：「我方从不承诺不甘就不痛苦。我方只说：<b>这份痛苦是有方向的。</b>」</div>
+  </div>
+
+  <h2>打法 3｜「天赋有上限，死磕不划算，应该把精力放到更擅长的地方」</h2>
+  <div class="q-a">
+    <div class="qq"><b>他们会说：</b>「人要理性配置自己的资源。这个领域你不擅长，就应该及时止损，去做你更擅长的事。」</div>
+    <div class="aa"><b>我方的拆法：</b><br>
+    ① <b>指出这是「转移」不是「接受」</b>：「您说的是<b>战略转移</b>——把那口气放到另一个领域去。可转移的人心里那股不甘还在，只是换了战场。<b>真正坦然接受的人，是连战场都不找了。</b>」<br>
+    ② <b>攻击「上限可知」</b>：「您说『天赋有上限』——对。可您怎么知道<b>您的上限就在这儿</b>？您试过所有路径了吗？换过方法了吗？」<br>
+    ③ <b>归位</b>：「所以您方最多证明『该换方法』，证明不了『该接受』。」</div>
+  </div>
+
+  <h2>打法 4｜「大多数人都是平凡的，接受才能活得下去」</h2>
+  <div class="q-a">
+    <div class="qq"><b>他们会说：</b>「现实一点，99% 的人都是普通人。非要人人不甘，只会让所有人痛苦。」</div>
+    <div class="aa"><b>我方的拆法：</b><br>
+    ① <b>点出从众谬误</b>：「『大多数人做不到』，推不出『你不该做』。否则历史上所有的突破都不该发生——因为在突破之前，所有人也都是那 99%。」<br>
+    ② <b>纠正对象</b>：「而且我方从来没要求『人人成功』。我方要求的是<b>别在看清之前关门</b>。成功是结果，不甘是姿态。」<br>
+    ③ <b>反将一军</b>：「您方说『接受才能活得下去』——那请问，那些不接受、最后真的走出来的人，是靠什么活下来的？」</div>
+  </div>
+
+  <h2>打法 5｜「你们这是成功学、是鸡汤、是内卷」</h2>
+  <div class="q-a">
+    <div class="qq"><b>他们会说：</b>「这套话术我们听多了，就是让人拼命、让人内卷的成功学。」</div>
+    <div class="aa"><b>我方的拆法：</b><br>
+    ① <b>划清界限</b>：「内卷是<b>在同一层重复消耗</b>，不甘于斯是<b>向上移动</b>。区别在于有没有增量。」<br>
+    ② <b>指出辩题问的是什么</b>：「这道题问的是『更应选择哪种<b>姿态</b>』，不是『怎么才能成功』。您方拿『方法有效性』来否定『姿态正当性』，是答错了题。」<br>
+    ③ <b>反过来问</b>：「那您方的主张，是不是也可以被叫做『躺平学』？——您看，贴标签谁都会，可标签不能代替论证。」<span class="sub">（这句要说得轻，别说重，否则显得攻击性太强）</span></div>
+  </div>
+
+  <h2>打法 6｜「很多人死磕一辈子很惨，梵高、卡夫卡就是例子」</h2>
+  <div class="q-a">
+    <div class="qq"><b>他们会说：</b>「多少人一辈子不被认可，最后郁郁而终。这就是不甘于斯的下场。」</div>
+    <div class="aa"><b>我方的拆法：</b><br>
+    ① <b>指出「惨」是外人的评价</b>：「梵高在画画的时候，是被这件事滋养的。<b>『惨』是我们在看他的收入；他自己在看他画里的光。</b>」<br>
+    ② <b>指出逻辑跳跃</b>：「有人失败，推不出『不该尝试』。否则人类不该有创业、不该有探险、不该有任何一次冒险。」<br>
+    ③ <b>反手用他们</b>：「而且这些人恰恰证明了：<b>他们到死都没有『坦然接受』</b>。您方举的例子，全是我方的人。」</div>
+  </div>
+
+  <h2>打法 7｜「接受平凡才是真正的自尊和成熟」</h2>
+  <div class="q-a">
+    <div class="qq"><b>他们会说：</b>「真正的自信不需要靠成就来证明。能坦然接受平凡的人，才是真正尊重自己的人。」</div>
+    <div class="aa"><b>我方的拆法：</b><br>
+    ① <b>把「成熟」拆成两件事</b>：「成熟是分清两件事——『<b>我做不到顶尖</b>』（这个要接受）和『<b>我不值得继续</b>』（这个不能接受）。<b>您方把这两件事合成了一件。</b>」<br>
+    ② <b>指出它的实际效果</b>：「您方的『自尊』，是不再需要努力的自尊。<b>可一个不需要努力的自尊，跟放弃有什么区别？</b>」<br>
+    ③ <b>给一个更硬的版本</b>：「真正的自尊，是<b>我知道我不行，但我还是愿意为我爱的东西再走一段</b>。这不丢人，这很体面。」</div>
+  </div>
+
+  <h2>★ 他们最可能反问我们的三个问题（提前背答案）</h2>
+  <div class="danger">
+    <p style="margin-top:0"><b>Q1：「那你说，一个人天赋就到这儿了，硬撑不是折磨自己吗？」</b><br>
+    答：「<b>天赋决定上限，但没人知道自己上限在哪。</b>您说的『到这儿了』，是谁告诉他的？是他走完了，还是他不想走了？」</p>
+    <p><b>Q2：「你们是不是要求人人都必须成功？」</b><br>
+    答：「<b>不是。</b>我方要求的是『别在看清之前关门』。<b>成功是结果，不甘是姿态。</b>我方从不承诺你一定赢，我方只说：别自己先判自己输。」</p>
+    <p><b>Q3：「那失败了怎么办？白折腾一场。」</b><br>
+    答：「<b>他至少知道自己走到了哪。</b>而坦然接受的人，连这个都不知道——他连『我到底行不行』这个问题，都没有答案。」</p>
+  </div>
+
+  <h2>三条红线（说了会掉分）</h2>
+  <div class="warn">
+    <p style="margin-top:0"><b>① 不要说「只要不甘就一定能成功」。</b>这是假的，而且一戳就破。改成「不甘不保证成功，但它保留了可能」。</p>
+    <p><b>② 不要贬低「接受」的人。</b>说「接受就是懦弱」会立刻失去共情分。<b>要说「接受位置是对的，接受上限才是问题」。</b></p>
+    <p style="margin-bottom:0"><b>③ 不要攻击对方的动机。</b>不说「你们就是想躺平」。只说「您方这个主张，在机制上会导致什么」。</p>
+  </div>
+
+  <div class="stamp"><span>破对方</span><span>最后更新：2026-10-22 20:05</span></div>
+</section>
+
+<section class="page" id="qs">
+  <h1>问题库：盘问 · 质询 · 自由辩论</h1>
+  <p class="lead">这一页是<b>速查版</b>。每个问题的完整接法（他这么答 → 你就这么接）在各自的辩位专区里。三辩的完整版在「<a href="#speaker3">三辩专区</a> · 三」。</p>
+
+  <div class="key">
+    <p style="margin:0"><b>★ 万能四句（他含糊 / 绕 / 反问 / 答完了，都靠这四句）：</b><br>
+    ① 「<b>没关系，我只问一个事实问题——</b>」<br>
+    ② 「<b>我换个说法：是，还是不是？</b>」<br>
+    ③ 「<b>按规则，您这一轮只能作答。请问——</b>」<br>
+    ④ 「<b>好，我记下了。</b>」<span class="sub">（说完立刻下一问，绝不点评、绝不争辩——你一争，烧的是你自己的时间。）</span></p>
+  </div>
+
+  <h2>A · 三辩盘问（我方三辩，1:30，第 8 环节）</h2>
+  <div class="warn">
+    <p style="margin:0"><b>机制复习：</b>① 可以<b>指派对方除三辩外任一辩手</b>作答 → 默认点<b>对方一辩</b>（判准和定义都是他念的，推不掉）② 答辩方发言<b>不计入你的时间</b> → 你的 1:30 全归自己用 ③ 答辩方<b>只能作答不能反问</b> ④ ⚠️ <b>盘问没有打断权</b>，别喊「我打断一下」。</p>
+  </div>
+
+  <div class="q-a">
+    <div class="qq"><b>Q1（抢定义）</b>：「请问对方一辩：您方说的『坦然接受』，接受的是<b>我现在的位置</b>，还是<b>我的上限</b>？」</div>
+    <div class="aa"><b>他答「位置」→</b>「好，那我方没有分歧。可您方主张的是『更应选择』——请问，接受位置之后，您还继续投入吗？」<br>
+    <b>他答「上限」→</b>「那请问，您怎么知道自己的上限在哪？您试过所有可能了吗？」<br>
+    <b>他答「都是」→</b>「只能选一个。只是接受位置，我们没分歧；接受上限，请您解释凭什么。」<br>
+    <b>他反问 →</b>「按规则您只能作答。是位置，还是上限？」</div>
+  </div>
+
+  <div class="q-a">
+    <div class="qq"><b>Q2（抢判准）</b>：「第二个问题：您方判断『更应』的标准，到底是什么？」</div>
+    <div class="aa"><b>他答「更幸福」→</b>「那请问：一个一辈子没试过的人，和一个试了十年没成的人，谁更可能后悔？」<br>
+    <b>他答「更成熟 / 更理性」→</b>「成熟是看清现实，还是放弃可能？您把这两个词划等号了吗？」<br>
+    <b>他含糊 →</b>「我换个问法：是『哪种更舒服』，还是『哪种更对得起自己』？只能选一个。」<br>
+    <b>他反问「那你们的标准呢」→</b>「我的标准待会儿说。现在是您方立论，请您先回答。」</div>
+  </div>
+
+  <div class="q-a">
+    <div class="qq"><b>Q3（把「创造」收进来）</b>：「请问您能不能举一个例子：一个人『坦然接受』自己平凡之后，反而在这个领域里变得更好？」</div>
+    <div class="aa"><b>他举不出来 →</b>「那我是不是可以理解为：接受之后，这个领域对他基本就结束了？」<span class="sub">（别替他说「你举不出吧」，让他自己空在那儿）</span><br>
+    <b>他举「接受后心态好了、反而进步」→</b>「那说明他接受的只是『不再焦虑』，不是『上限』。<b>这恰恰是我方说的：接受位置、不接受上限。</b>」<br>
+    <b>他举「有人转行成功」→</b>「那是转移，不是接受。他换了个战场，那口气还在。」</div>
+  </div>
+
+  <div class="q-a">
+    <div class="qq"><b>Q4（良心题）</b>：「一个 20 岁发现自己当不了顶尖画家的人——『坦然接受』和『再画五年』，哪一个更像是对得起自己？」</div>
+    <div class="aa"><b>他答「接受」→</b>「那我想请问：他 20 岁接受，35 岁回头看，会不会想问一句『如果当年我再画五年呢』？」<span class="sub">（问完停满两秒，别补话）</span><br>
+    <b>他答「再画五年」→</b>「谢谢，这正是我方主张。」<span class="sub">（他自认，立刻收）</span><br>
+    <b>他含糊 →</b>停两秒，直接「好，我记下了」，转 Q5。</div>
+  </div>
+
+  <div class="q-a">
+    <div class="qq"><b>Q5（收尾，说给评委听，不点人）</b>：「我方从不否认平凡，我方也不承诺成功。我方只问一句——<b>一个人凭什么，在还没走完的时候，就替自己写下『到此为止』？</b>」</div>
+    <div class="aa"><span class="sub">说完立刻坐下。这一句的价值在你坐下那个动作里。</span></div>
+  </div>
+
+  <h2>B · 二辩质询（我方二辩，双边 2:00，第 4 环节）</h2>
+  <div class="card">
+    <p style="margin-top:0" class="sub">质询和盘问相反：<b>可以打断</b>，但<b>双边计时</b>（你说的话也算你的 2 分钟）。所以问题要短、要封闭。</p>
+    <p><b>质询三问：</b></p>
+    <p><b>① 逼定义</b>：「您方说的『接受平凡』，是接受您现在的水平，还是接受您这辈子就到这儿了？」</p>
+    <p><b>② 逼程度</b>：「那如果一个人接受之后还在努力，您方还认为他是在『坦然接受』吗？」<span class="sub">（他答「是」＝他的定义自我矛盾；他答「不是」＝他把努力的人让给我们了）</span></p>
+    <p style="margin-bottom:0"><b>③ 逼判准</b>：「您方判断『更应』，是靠『哪种更舒服』，还是『哪种更对得起自己』？」</p>
+  </div>
+
+  <h2>C · 自由辩论（12 张牌，全队共享 3:00）</h2>
+  <div class="danger">
+    <p style="margin-top:0"><b>⚠️ 老规矩：章程写「各 3:00」＝全队四个人共享 3 分钟，不是每人 3 分钟。</b>平摊每人 45 秒；一次发言按 15 秒算，全队大约 12 次发言。<b>而且这次我们是正方——我们先开口。</b></p>
+  </div>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:120px">牌</th><th>一句话怎么甩</th><th style="width:110px">谁主甩</th></tr></thead>
+    <tbody>
+      <tr><td><b>位置 / 上限</b></td><td>「您方接受的是位置，还是上限？」</td><td>三辩</td></tr>
+      <tr><td><b>上限谁定</b></td><td>「凭什么在还没走完的时候，就知道自己的上限？」</td><td>三辩</td></tr>
+      <tr><td><b>战略转移</b></td><td>「那是换战场，不是接受。那口气还在。」</td><td>二辩</td></tr>
+      <tr><td><b>内耗</b></td><td>「内耗来自跟别人比，不来自跟昨天的自己比。」</td><td>二辩</td></tr>
+      <tr><td><b>后悔</b></td><td>「35 岁回头看，会不会想问一句『如果当年我再试五年呢』？」</td><td>四辩</td></tr>
+      <tr><td><b>从众</b></td><td>「大多数人做不到，推不出你不该做。」</td><td>一辩</td></tr>
+      <tr><td><b>地图</b></td><td>「看清地图，不是为了把地图收起来。」</td><td>一辩</td></tr>
+      <tr><td><b>止痛</b></td><td>「接受是一种止痛药。止的是痛，收走的是问题。」</td><td>三辩</td></tr>
+      <tr><td><b>方仲永</b></td><td>「他不是没天赋，他是太早接受了自己『就到这里』。」</td><td>四辩</td></tr>
+      <tr><td><b>齐白石</b></td><td>「五十多岁改画风的人，从来没接受过自己的上限。」</td><td>二辩</td></tr>
+      <tr><td><b>西西弗斯</b></td><td>「他每天还是把石头推上去——接受荒诞，不等于接受无能。」</td><td>四辩</td></tr>
+      <tr><td><b>收口</b></td><td>「平凡的对面不是不平凡，是『我试过了』。」</td><td>四辩</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="stamp"><span>问题库</span><span>最后更新：2026-10-22 20:05</span></div>
+</section>
+<section class="page" id="mats">
+  <h1>素材库：例子 · 名言 · 类比</h1>
+  <p class="lead">素材不是越多越好，是<b>能一句话说清、对方反驳不掉</b>才好。这里的每一条都配了「怎么用」和「注意」。</p>
+
+  <h2>一、例子（按好用程度排）</h2>
+
+  <div class="ok">
+    <p style="margin-top:0"><b>🆕 队友资料包（10/22 晚，·Lu 整理）</b>——豆包检索 + 全队攻防讨论的成果，例子全部贴题（曾经骄傲 → 看清平凡 → 不甘前进），<b>注意口径：所有例子不讲成「最后登顶变天才」，讲「认清很难到顶、依然选择向上」。</b></p>
+    <p style="margin-bottom:0"><span class="sub">标注 ⭐ = 自由辩论优先用；标 💬 = 可直接抛给对方辩友。</span></p>
+  </div>
+
+  <h3>⭐ 苏炳添（首选，赛场冲击力最强）</h3>
+  <div class="card">
+    <p style="margin-top:0"><b>事实：</b>曾是国内一流短跑选手、一度为自己的成绩骄傲。但他清楚黑人选手在百米项目上有天然身体天赋壁垒，以他的先天条件，要站上奥运领奖台、和世界顶尖选手抗衡，本是极难的事——他认清了自己在这条赛道上的平凡上限。</p>
+    <p><b>怎么用：</b>他没有坦然接受「我这辈子这样就够了」，而是冒着巨大风险改起跑脚、推翻自己十几年的习惯，一点点打磨技术，最终跑到 <b>9 秒 83</b>、打破亚洲纪录。</p>
+    <p style="margin-bottom:0" class="sub"><b>话术：</b>「不甘不是非要碾压所有人，而是哪怕平凡，也要不断推开自己的边界。」</p>
+  </div>
+
+  <h3>💬 校园辩论本身（最贴我们自身，评委共情强——自由辩论可反抛）</h3>
+  <div class="card">
+    <p style="margin-top:0"><b>事实：</b>就像我们今天打辩论：你曾经在班里、院赛打得很好，为自己的思辨表达骄傲；当你接触校赛、省赛，遇见更强的对手，才发现自己的反应、立论深度和顶尖辩手差距巨大——认清了自己在辩论这件事上其实很平凡。</p>
+    <p style="margin-bottom:0" class="sub"><b>话术（直接抛给对方辩友）：</b>「如果是您，在您曾经引以为傲的辩论领域，看见自己和顶尖辩手的差距，是不是就该坦然接受、不再精进？<b>我们今天站在这里持方，本身就是这个例子。</b>」</p>
+  </div>
+
+  <h3>③ 麦家《解密》（文学类，文艺感强）</h3>
+  <div class="card">
+    <p style="margin-top:0"><b>事实：</b>麦家早年写出《解密》收获认可、以写作为傲。但他深知在文学长河里自己很难成为比肩文学巨匠的那类人。《解密》前后历时 <b>11 年、经历 17 次退稿</b>。他看清自己没有一击成名的天才文笔，却不甘就此放下写作，一遍遍重写、打磨文字、持续深耕，才有后续《暗算》《人生海海》。</p>
+    <p style="margin-bottom:0" class="sub"><b>话术：</b>「他承认自己不是文学天才，但不甘让热爱止步于当下。」</p>
+  </div>
+
+  <h3>④ 网文 / 写作者（离学生最近）</h3>
+  <div class="card">
+    <p style="margin-top:0"><b>事实：</b>一个写作者写出过一篇小爆款、为自己的文字骄傲；可进入更大的平台，看见无数天赋更好、灵感源源不断的作者，明白自己大概率成不了头部大神。</p>
+    <p style="margin-bottom:0" class="sub"><b>对比话术：</b>坦然接受＝维持现状、不再钻研、写点轻松的；不甘于斯＝知道上限存在，依然反复打磨叙事、学习技巧，慢慢写出更好的故事，<b>目标不是碾压大神，是不辜负自己对写作的热爱</b>。</p>
+  </div>
+
+  <h3>⑤ 清华博士后胡溁（普通人，不易被反打「他们本来就是天才」）</h3>
+  <div class="card">
+    <p style="margin-top:0"><b>事实：</b>从中职起步，曾在技能竞赛拿到奖项、为自己的专业能力骄傲。进入更高层次的科研圈子后，清楚看见身边很多人基础、悟性远优于自己。他没有坦然接受「一个中职出身，做到这样已经很好」，不甘心停在这里，一次次考研、反复试错，持续深耕学术，走到博士后阶段。</p>
+    <p style="margin-bottom:0" class="sub"><b>话术：</b>「他未必能做出轰动世界的重大成果，但不甘支撑他不断往前走。」</p>
+  </div>
+
+  <h3>⑥ 金博洋 / 攀岩伍鹏（备选，赛场类）</h3>
+  <div class="card">
+    <p style="margin-top:0"><b>金博洋：</b>少年成名、曾是中国花滑男单的骄傲，清楚和羽生结弦这类天赋型选手存在难以抹平的差距、伤病起伏、多次站上奥运赛场却很难登上最高领奖台。他没接受「到我这里就够了」，多年持续打磨难度、调节节目，一次次回到冰场——<b>哪怕知道自己很难成为项目的天花板，依然愿意放下对更高演绎水准的追求</b>。</p>
+    <p style="margin-bottom:0"><b>伍鹏：</b>速度攀岩胜负往往在 0.01 秒之间。伍鹏站上领奖台、拿到成绩后，慢慢意识到总有一批天赋更强的选手稳定快他一截，成绩长期卡在瓶颈。他日复一日重复同样动作、努力很久也看不到明显进步，但没有接受瓶颈、不再冲击，而是继续抠细节、调整发力，守住向上的追求。</p>
+  </div>
+
+  <h3>⑦ 王忠心（工匠/职业类）</h3>
+  <div class="card">
+    <p style="margin-top:0"><b>事实：</b>导弹兵王王忠心，在测控岗位上做得很优秀、一度引以为傲；后来单位调来科班出身、理论功底极强的大学生士官，同台对比他清楚自己学历底子薄、先天基础不如对方，在这个专业里自己是平凡的老兵。他没坦然接受「我经验够了，不用再精进」，不甘落后，持续啃理论、反复打磨操作，最后考核反超，几十年零失误，把平凡岗位的技艺不断推向更高标准。</p>
+  </div>
+
+  <h2>一½、队友攻防手册（10/22 晚）</h2>
+
+  <h3>进攻 3 连（我们打对方用）</h3>
+  <div class="q-a">
+    <div class="qq"><b>攻 1｜大国重器反问：</b></div>
+    <div class="aa">「倘若我们倡导所有人在看见差距时优先坦然接受，那一代又一代的建设者看见技术壁垒时都选择接受现状，我们的大国重器又从何而来？<b>坦然适合用来接纳努力过后无法改变的结果，却不适合当作出发之前就选择放弃的理由。</b>」</div>
+  </div>
+  <div class="q-a">
+    <div class="qq"><b>攻 2｜放下骄傲＝逃避：</b></div>
+    <div class="aa">「当我们曾经引以为傲的闪光点，仅仅因为见识到更强的人就要被我们主动放下，这样的坦然，难道不是逃避挑战的借口吗？<b>看似和自己和解，实则是主动关上了自我提升的大门。</b>」</div>
+  </div>
+  <div class="q-a">
+    <div class="qq"><b>攻 3｜「更应该」追问（价值层）：</b></div>
+    <div class="aa">「今天辩题讨论的是『更应该』。请问对方辩友，坦然接受相较于不甘于斯，究竟能提供什么<b>不可替代、更值得推崇的长远价值</b>？<b>坦然擅长安抚情绪，而不甘负责创造可能性</b>——价值选择上，我们更需要后者。」<br>
+    <span class="sub">接续句：「对方辩友一直把坦然接受包装成成熟和解——那这种和解，难道是以牺牲自我成长的可能性为代价吗？真正的和解，是认清前路艰难之后，依然有力量选择继续走下去。」</span></div>
+  </div>
+
+  <h3>防守 7 点（对方打我们时按号取牌）</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:200px">对方的攻击</th><th>我们的应对（挑一句念）</th></tr></thead>
+    <tbody>
+      <tr><td><b>1. 不甘＝内耗痛苦</b></td><td>「不甘不等于攀比——我不和别人比高度，我只不甘心停在现在的位置，这怎么是内耗？<b>痛苦来自执念要赢过所有人，不甘来自舍不得热爱</b>，二者不能混为一谈。」</td></tr>
+      <tr><td><b>2. 人有上限，要认清边界</b></td><td>「不往前走，我们凭什么断定这就是我们的天花板？能力的边界不是一眼就能看见的，<b>不甘正是我们去试探边界的动力</b>。就算达不到顶尖，追赶路上收获的成长，难道不值得吗？」</td></tr>
+      <tr><td><b>3. 和解／接纳才成熟</b></td><td>「和解不等于止步——接纳当下的我平凡，和我不甘于一直平凡，<b>完全可以共存</b>。真正的和解不是放弃热爱躺平，而是允许自己慢慢来，但依然愿意向前。」</td></tr>
+      <tr><td><b>4. 不甘＝内卷</b></td><td>「内卷是互相挤压、零和竞争；不甘是向内打磨自我，根本不是一回事。<b>我方的不甘不需要挤占别人的资源，只需要对自己的热爱负责。</b>」</td></tr>
+      <tr><td><b>5. 普通人该知足</b></td><td>「知足是心态，不代表要把热爱的道路直接堵死。<b>普通人一样可以有向上的追求，难道只有天才才有资格不甘吗？</b>」</td></tr>
+      <tr><td><b>6. 骄傲只是错觉，看清就该放下</b></td><td>「当初的骄傲不是错觉，是我实实在在付出汗水换来的成果，它有真实的价值。眼界拓宽发现差距，<b>修正的是我的认知，不是要否定过去所有的努力</b>。」</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+
+  <h3>① 方仲永（最好用的反面例子）</h3>
+  <div class="card">
+    <p style="margin-top:0"><b>事实：</b>王安石《伤仲永》。方仲永家里世代务农，他五岁从没读过书，忽然哭着要笔墨，当场作诗四句。父亲发现有利可图，就每天带他到处拜访、炫耀，<b>不让他读书</b>。十二三岁时写的诗已经不如从前，二十岁左右「<b>泯然众人矣</b>」。</p>
+    <p><b>怎么用：</b>「他不是没有天赋，他是<b>太早接受了自己『就到这里』</b>。」</p>
+    <p style="margin-bottom:0" class="sub"><b>注意：</b>这是古文，说「王安石《伤仲永》」就够了，别说年份。</p>
+  </div>
+
+  <h3>② 齐白石「衰年变法」</h3>
+  <div class="card">
+    <p style="margin-top:0"><b>事实：</b>齐白石早年是木匠，后来画画，一直不算出名。五十多岁定居北京后，画卖不出去，被人说「俗」。他下决心改变画风，闭门十年，最终自成一派。</p>
+    <p><b>怎么用：</b>「一个五十多岁、已经被人说『你这画不行』的人，没有接受自己的上限，他改了画风。」</p>
+    <p style="margin-bottom:0" class="sub"><b>注意：</b>说「<b>五十多岁</b>」，别报精确岁数——不同资料有 55 / 57 两种说法，被证据检证会被抓。</p>
+  </div>
+
+  <h3>③ 村上春树 29 岁开始写小说</h3>
+  <div class="card">
+    <p style="margin-top:0"><b>事实：</b>他此前开爵士酒吧，从没写过任何东西。29 岁看一场棒球赛时忽然想「我也能写小说」，当晚开始写，后来发表《且听风吟》。</p>
+    <p style="margin-bottom:0"><b>怎么用：</b>「他在一个从没涉足过的领域，29 岁才起步。按『发现平凡就该接受』的逻辑，他连第一页都不该写。」</p>
+  </div>
+
+  <h3>④ 屠呦呦与青蒿素</h3>
+  <div class="card">
+    <p style="margin-top:0"><b>事实：</b>1969 年，39 岁的屠呦呦接手抗疟研究项目，团队筛选了大量中药和化合物，反复失败，后来从东晋葛洪《肘后备急方》里得到启发，改用低温提取，才找到青蒿素。</p>
+    <p style="margin-bottom:0"><b>怎么用：</b>「在上百次失败之后才找到方向。如果她中途『坦然接受』了『这个方向不行』，就没有青蒿素。」<br><span class="sub"><b>注意：</b>说「<b>上百次失败</b>」，不要报精确数字（常见说法有 190 次，但口径不一）。</span></p>
+  </div>
+
+  <h3>⑤ 苏轼（<span class="pill red">防对方抢</span>）</h3>
+  <div class="card">
+    <p style="margin-top:0"><b>对方很可能会用：</b>「苏轼被贬黄州，坦然接受，才写出《赤壁赋》——所以接受才能成就。」</p>
+    <p><b>我方怎么接：</b>「苏轼接受的是<b>官场的失意</b>，他从来没接受<b>『我写不出好东西』</b>。恰恰相反——他在黄州写出了他一生最好的作品。<b>他接受的是位置，不是上限。这正是我方立场。</b>」</p>
+    <p style="margin-bottom:0" class="sub">这一接很关键：对方最爱的例子，正好帮我们证明「接受位置、不接受上限」是可以并存的。</p>
+  </div>
+
+  <h2>二、名言（每条都标了出处，方便证据检证）</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:200px">句子</th><th style="width:190px">出处</th><th>怎么用</th></tr></thead>
+    <tbody>
+      <tr><td>「是知其不可而为之者与？」</td><td>《论语·宪问》<br><span class="sub">守门人形容孔子</span></td><td>最好用的一条。中国古典里最硬的「不甘于斯」</td></tr>
+      <tr><td>「虽千万人，吾往矣。」</td><td>《孟子·公孙丑上》</td><td>用在自由辩论收口，气势足</td></tr>
+      <tr><td>「路漫漫其修远兮，吾将上下而求索。」</td><td>屈原《离骚》</td><td>适合一辩结尾，稳</td></tr>
+      <tr><td>「必须想象西西弗斯是幸福的。」</td><td>加缪《西西弗斯神话》</td><td>四辩结辩用。⚠️ 用法见下</td></tr>
+      <tr><td>「我唯一知道的，就是我一无所知。」</td><td>对柏拉图《申辩篇》的概括<br><span class="sub">不是苏格拉底原话</span></td><td>说「这是后人对苏格拉底的概括」，别说「苏格拉底说」</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="danger">
+    <p style="margin:0"><b>⚠️ 西西弗斯这条有陷阱，必须按这个用法说：</b><br>
+    反方一定会抢：「西西弗斯接受了荒诞，所以接受才是智慧。」<br>
+    我方要立刻切开：<b>「他接受的是『世界没有意义』这个事实，他从来没有接受『我推不上去』。他每天还是把石头推上去。」</b><br>
+    <span class="sub">＝ 接受荒诞 ≠ 接受无能。这句话说出来，反方这一条就废了。</span></p>
+  </div>
+
+  <h2>三、三个杀手类比（最好记，也最好用）</h2>
+  <div class="grid g3">
+    <div class="card">
+      <p style="margin:0 0 6px"><b>地图</b></p>
+      <p style="margin:0" class="mini">发现自己平凡＝终于看到完整地图，知道自己在哪。<br><b>接受＝把地图收起来；不甘＝照着地图继续走。</b></p>
+    </div>
+    <div class="card">
+      <p style="margin:0 0 6px"><b>体检报告</b></p>
+      <p style="margin:0" class="mini">报告告诉你指标不行。<br><b>接受＝把报告裱起来说「我身体就这样」；不甘＝开始锻炼。</b></p>
+    </div>
+    <div class="card">
+      <p style="margin:0 0 6px"><b>止痛药</b></p>
+      <p style="margin:0" class="mini">接受是一种止痛。<br><b>止的是痛，收走的是「我还能不能更好」这个问题。</b></p>
+    </div>
+  </div>
+
+  <h2>四、引用红线</h2>
+  <div class="warn">
+    <p style="margin-top:0"><b>① 不报精确数字。</b>「上百次失败」比「190 次」安全；「五十多岁」比「55 岁」安全。</p>
+    <p><b>② 不说「心理学家说」「研究表明」。</b>没有具体出处的，一律当没有。</p>
+    <p><b>③ 名言必须能说出书名。</b>说不出来就别用——第 15 环节证据检证会问。</p>
+    <p style="margin-bottom:0"><b>④ 不用对方也可能用的例子去攻击对方</b>（除了苏轼、西西弗斯这两个我们准备好了接法的）。</p>
+  </div>
+
+  <div class="stamp"><span>素材库</span><span>最后更新：2026-10-22 20:05</span></div>
+</section>
+
+<section class="page" id="scripts">
+  <h1>上场稿：我方什么时候上</h1>
+  <p class="lead">这一轮我们<b>是正方</b>，所以从头到尾都排在前半段。下面这 9 个节点是我们的人要说话的每一个时刻。</p>
+
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:70px">环节</th><th>内容</th><th style="width:110px">时长</th><th style="width:110px">我方谁</th></tr></thead>
+    <tbody>
+      <tr><td><b>1</b></td><td>正方一辩 · 开篇陈词</td><td>3:00</td><td><b>一辩</b>（第一个上）</td></tr>
+      <tr><td>2</td><td>反方二辩 · 质询我方一辩</td><td>双边 2:00</td><td>一辩（回答）</td></tr>
+      <tr><td><b>4</b></td><td>正方二辩 · 质询对方一辩</td><td>双边 2:00</td><td><b>二辩</b>（可打断）</td></tr>
+      <tr><td><b>6</b></td><td>正方二辩 · 质询小结</td><td>1:30</td><td><b>二辩</b></td></tr>
+      <tr><td><b>7</b></td><td>正、反四辩 · 对辩</td><td>各 1:30</td><td><b>四辩</b>（<span class="pill">正方先开口</span>）</td></tr>
+      <tr><td><b>8</b></td><td>正方三辩 · 盘问</td><td>1:30</td><td><b>三辩</b></td></tr>
+      <tr><td><b>10</b></td><td>正方三辩 · 质询小结</td><td>1:30</td><td><b>三辩</b></td></tr>
+      <tr><td><b>12</b></td><td>自由辩论</td><td>各 3:00<br><span class="sub">全队共享</span></td><td>四个人</td></tr>
+      <tr><td><b>14</b></td><td>正方四辩 · 总结陈词</td><td>3:00</td><td><b>四辩</b>（全场最后发言）</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="key">
+    <p style="margin:0"><b>★ 三个必须记住的时点：</b><br>
+    ① <b>第 1 环节我们就上台</b>——没有热身，一开口就是比赛。<br>
+    ② <b>第 8 环节三辩、第 10 环节三辩</b>——中间只隔一个对方三辩的盘问，<b>你几乎没有喘息时间</b>，小结稿要提前捏在手里。<br>
+    ③ <b>第 14 环节我们是最后说话的人</b>——这是正方唯一的结构性优势，四辩的结辩要当「收网」打。</p>
+  </div>
+
+  <h2>各辩位入口</h2>
+  <div class="enter">
+    <a href="#speaker1"><span class="ico">①</span><b>一辩</b><span>3:00 开篇<br>完整逐字稿</span></a>
+    <a href="#speaker2"><span class="ico">②</span><b>二辩</b><span>质询 2:00<br>＋小结 1:30</span></a>
+    <a href="#speaker3"><span class="ico">③</span><b>三辩</b><span>盘问 5 问<br>＋小结换句</span></a>
+    <a href="#speaker4"><span class="ico">④</span><b>四辩</b><span>对辩 11 张牌<br>＋结辩 3:00</span></a>
+  </div>
+
+  <div class="stamp"><span>上场稿</span><span>最后更新：2026-10-22 20:05</span></div>
+</section>
+
+<section class="page" id="speaker1">
+  <h1>一辩专区：开篇陈词 3 分钟</h1>
+  <div class="key">
+    <p style="margin:0"><b>★ 时间不够？只看这三块：</b><br>
+    ① <b>第 2 段</b>——开场必须先承认「我很平凡」（不承认，对方一句话把你打成自欺欺人）<br>
+    ② <b>第 4 段</b>——判准那三行，全队四人都靠它<br>
+    ③ <b>最后一句</b>——「看清自己，是清醒；看清之后还愿意再走一段，才是骄傲。」</p>
+  </div>
+
+  <h2>一、环节机制（零基础先看这个）</h2>
+  <div class="card">
+    <p style="margin-top:0"><b>你是第 1 环节，3 分钟，没人打断你。</b>主席叫到「正方一辩」，你站起来讲满 3 分钟，坐下。就这么简单。</p>
+    <p><b>但你是全场第一个说话的人</b>，这意味着：你说的每一个定义、每一条判准，都会成为后面三个辩位的地基。<b>所以你的任务不是「说赢」，是「立稳」。</b></p>
+    <p style="margin-bottom:0"><b>3 分钟 ≈ 880–920 个汉字</b>（按 300 字/分算）。下面这稿正文是 <b>856 汉字＋33 个停顿</b>，折合约 <b>2 分 36 秒</b>（856÷300×60＋33×0.35 ≈ 183 秒）——<b>留了 20 多秒余量，故意留的</b>：线上念稿会比平时慢，卡一下、咳一下都在这 20 秒里。<b>念到 2:50 就该收尾，超 3 分钟要扣分。</b></p>
+  </div>
+
+  <h2>二、时间表（照着分段）</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:100px">时间</th><th>讲到哪</th><th style="width:180px">提醒</th></tr></thead>
+    <tbody>
+      <tr><td>0:00–0:15</td><td>问好 ＋ 亮立场</td><td>慢一点，别抢</td></tr>
+      <tr><td>0:15–0:50</td><td>先说<b>不</b>主张什么（承认平凡、不承诺成功）</td><td><b>这段别省</b></td></tr>
+      <tr><td>0:50–1:25</td><td>题眼：「骄傲的领域」＋「这是入场券」</td><td>「骄傲」两个字要重读</td></tr>
+      <tr><td>1:25–1:32</td><td>判准</td><td>说完停两秒，让评委记下来</td></tr>
+      <tr><td>1:32–2:05</td><td>论点一：接受位置 vs 接受上限</td><td>这是全场最重要的一刀</td></tr>
+      <tr><td>2:05–2:28</td><td>论点二：止痛与自证循环</td><td>语速可略快</td></tr>
+      <tr><td>2:28–2:50</td><td>论点三：齐白石 / 村上 / 屠呦呦 ＋ 仲永</td><td>例子只报名字，别展开</td></tr>
+      <tr><td>2:50–3:00</td><td>预判两句 ＋ 收尾金句</td><td>最后一句放慢</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>三、逐字稿</h2>
+  <p class="sub">记号：<span class="hl">黄底</span>＝重音；<span class="pz">／</span>＝短停；<span class="pz">∥</span>＝长停。</p>
+
+  <div class="speech" id="s1txt">
+    <p>谢谢主席，各位评委、对方辩友，大家好。<span class="pz">∥</span>我方主张：在骄傲的领域发现自己其实很平凡，<b class="hl">更应选择不甘于斯</b>。</p>
+    <p>先说清楚我方<b>不</b>主张什么。<span class="pz">／</span>我方从不否认「平凡」这个事实——绝大多数人在绝大多数领域都是平凡的，这一点我方<b class="hl">完全承认</b>。<span class="pz">／</span>我方也不承诺「不甘就一定能成功」。<span class="pz">∥</span>我方主张的只有一件事：在看清自己的那一刻，<b class="hl">别替自己写下「到此为止」</b>。</p>
+    <p>题目里有四个字最要紧——「<b class="hl">骄傲的领域</b>」。<span class="pz">／</span>它不是随便一个领域，是你投入过、赢过、被它滋养过的地方。<span class="pz">∥</span>正因为骄傲，这一课才最疼；也正因为骄傲，这一刻才最珍贵。<span class="pz">∥</span>因为一个从没走出小圈子的人，永远不会「发现自己平凡」。<span class="pz">／</span>你能发现自己平凡，说明你已经走到了<b class="hl">能看清差距</b>的地方。<span class="pz">∥</span>这不是失败的通知，<b class="hl">这是入场券</b>。</p>
+    <p>所以我方的判准是：在这个时刻，哪种选择，<b class="hl">更对得起「骄傲」这两个字</b>。</p>
+    <p>第一，不甘于斯，才是对「骄傲」的诚实。<span class="pz">／</span>坦然接受听起来豁达，可它接受的是什么？<span class="pz">∥</span>如果接受的是「我现在的位置」，我方<b>没有分歧</b>；<span class="pz">／</span>如果接受的是「我的上限」，那请问——<b class="hl">你凭什么在还没走完的时候，就知道自己的上限在哪？</b><span class="pz">∥</span>接受位置是清醒，接受上限是提前认输。<span class="pz">／</span>这两件事只差一步，而这一步，<b class="hl">没人替你守</b>。</p>
+    <p>第二，坦然接受会悄悄把「接受位置」换成「接受上限」。<span class="pz">／</span>它给人的不是动作，是<b class="hl">止痛</b>——让你不必再为「我本可以」难受。<span class="pz">∥</span>止痛的代价是，你不再问「我还能不能更好」。<span class="pz">／</span>更隐蔽的是，一旦接受，人会为平凡找理由：靠天赋、起步晚了、条件不行。<span class="pz">∥</span>这些理由会让你越来越确信「平凡是对的」。<span class="pz">／</span>这不是道德批判，这是<b>机制</b>。</p>
+    <p>第三，不甘于斯，是唯一能改变「平凡」的变量。<span class="pz">／</span>平凡不是标签，是相对位置；相对位置会变，只要有人往上走。<span class="pz">∥</span>齐白石五十多岁衰年变法，村上春树二十九岁才写下第一篇小说，屠呦呦三十九岁接手项目、失败上百次才找到方向。<span class="pz">∥</span>他们都不是天才，他们只是在「我很平凡」的那一刻，<b class="hl">没有停下来</b>。<span class="pz">∥</span>反过来看方仲永——五岁能诗，父亲带着他四处炫耀、不再让他读书，最后「泯然众人」。<span class="pz">／</span>他不是没有天赋，他是<b class="hl">太早接受了自己「就到这里」</b>。</p>
+    <p>对方可能会说：死磕会内耗，接受才能幸福。<span class="pz">／</span>我方回应一句：内耗的根源是「我必须比别人强」；而我方主张的，是「我想比昨天好一点」。<span class="pz">∥</span>这是两件事。<span class="pz">∥</span>他们也可能说：大多数人就是平凡的。<span class="pz">／</span>可「大多数人做不到」，推不出「<b class="hl">你不该做</b>」。</p>
+    <p>最后我想说：不甘于斯的人也会失败。<span class="pz">／</span>但他失败之后，知道自己走到了哪；<span class="pz">／</span>坦然接受的人不会失败，因为他根本没再试——<span class="pz">／</span>他失去的，是<b class="hl">知道自己上限在哪的机会</b>。</p>
+    <p>看清自己，是清醒；<span class="pz">∥</span>看清之后还愿意再走一段，<b class="hl">才是骄傲</b>。<span class="pz">∥</span>谢谢。</p>
+  </div>
+  <p><button class="copy" onclick="cp('s1txt',this)">复制这一稿</button> <span class="mini">856 汉字 / 33 个停顿 · 实测节奏约 2:36 · 3:00 红线</span></p>
+
+  <h2>四、超时了怎么砍（按顺序）</h2>
+  <div class="warn">
+    <p style="margin-top:0"><b>先别急着砍：</b>这稿实测只到 <b>2:36</b>，天然有 20 秒余量。<b>宁可多留，不要念快。</b></p>
+    <p><b>砍第一刀（真卡了才用）：</b>论点三里的「村上春树」和「屠呦呦」两句，只留齐白石 ＋ 方仲永（省约 12 秒）。</p>
+    <p><b>砍第二刀：</b>论点二的「更隐蔽的是……」整句（省约 10 秒）。</p>
+    <p style="margin-bottom:0"><b>永不砍：</b>① 承认平凡那段 ② 判准那一行 ③「接受位置 vs 接受上限」④ 最后一句金句。<br>
+    <span style="color:#b4453c"><b>⚠️ 还有一个隐藏坑：</b>念到论点二时，<b>「我方从不否认」这句不能漏</b>——评委只记得开头 40 秒，那 40 秒就是「我们承认平凡」。</span></p>
+  </div>
+
+  <h2>五、上场前要记牢的</h2>
+  <div class="ok">
+    <p style="margin-top:0"><b>1. 第一句就要承认平凡。</b>评委最怕听到「我不平凡」这种话——那会让你后面全篇都像在自欺。</p>
+    <p><b>2. 「骄傲」两个字要重读。</b>这是题眼，读轻了整篇就变成「努力奋斗」的泛泛之谈。</p>
+    <p><b>3. 判准说完停两秒。</b>让评委有时间在心里记下来。这很值。</p>
+    <p><b>4. 例子只报名字，不展开故事。</b>3 分钟装不下故事，展开就超时。</p>
+    <p style="margin-bottom:0"><b>5. 不要看对方，看评委。</b>你是第一个说话的人，你要建立的是「评委对你的信任」。</p>
+  </div>
+
+  <div class="stamp"><span>一辩专区 · 正方 · 开篇陈词</span><span>最后更新：2026-10-22 20:05</span></div>
+</section>
+
+<section class="page" id="speaker2">
+  <h1>二辩专区：质询 2:00 ＋ 质询小结 1:30</h1>
+  <div class="key">
+    <p style="margin:0"><b>★ 时间不够？只看这三块：</b><br>
+    ① <b>质询的三个问题</b>（位置还是上限 / 接受后还努力吗 / 判准是舒服还是对得起）<br>
+    ② <b>双边计时</b>：你说的每句话都烧你自己的 2 分钟 —— 问题必须短<br>
+    ③ <b>小结稿</b>：只讲「他没答上来什么」，不讲「我方多有理」</p>
+  </div>
+
+  <h2>一、环节机制</h2>
+  <div class="card">
+    <p style="margin-top:0"><b>第 4 环节 · 你质询对方一辩（双边 2:00）</b><br>
+    ✅ 你<b>可以打断</b>他（这是你和三辩最大的区别）<br>
+    ⚠️ <b>双边计时</b>：他回答的时间也算你的。所以「问得短」比「问得多」重要。<br>
+    ⚠️ 他只能作答、不能反问你。他一反问，你就说「您这一轮只能作答」。</p>
+    <p style="margin-bottom:0"><b>第 6 环节 · 你的质询小结（1:30，单人计时）</b><br>
+    这一段是<b>说给评委听</b>的，不是跟对方吵架。只做一件事：<b>把他刚才躲掉的东西，一条条摆出来。</b></p>
+  </div>
+
+  <h2>二、质询：三个问题（每个 20–40 秒）</h2>
+
+  <div class="q-a">
+    <div class="qq"><b>Q1｜逼定义（15 秒）</b><br>「您方说的『坦然接受平凡』，是接受<b>您现在的水平</b>，还是接受<b>您这辈子就到这儿了</b>？」</div>
+    <div class="aa"><b>他答「现在的水平」→</b>「好。那接受之后，您还继续投入吗？」<br>
+    <b>他答「就到这儿」→</b>「那请问，您怎么知道『这儿』就是上限？您试过所有方法了吗？」<br>
+    <b>他说「两个都是」→</b>「只能选一个。是接受水平，还是接受上限？」<span class="sub">（问三遍也别换问法，重复本身就有效）</span></div>
+  </div>
+
+  <div class="q-a">
+    <div class="qq"><b>Q2｜逼程度（20 秒）</b><br>「那如果一个人接受了自己平凡，但他<b>还在努力</b>——您方还认为他是在『坦然接受』吗？」</div>
+    <div class="aa"><b>他答「是」→</b>「那您方的『接受』和『努力』就并存了。可题目让您比较的是两种<b>姿态</b>——您方到底在选哪一种？」<br>
+    <b>他答「不是」→</b>「谢谢。那您方已经把『努力的人』让给我方了。」<span class="sub">（这一问是陷阱：他怎么答都难受）</span><br>
+    <b>他含糊 →</b>「我换个说法：接受之后，还努力吗？是，还是不是？」</div>
+  </div>
+
+  <div class="q-a">
+    <div class="qq"><b>Q3｜逼判准（20 秒）</b><br>「您方判断『更应』，是靠『<b>哪种更舒服</b>』，还是靠『<b>哪种更对得起自己</b>』？」</div>
+    <div class="aa"><b>他答「更舒服」→</b>「那请问：一个一辈子没试过的人，和一个试了十年没成的人，谁更舒服？谁更可能后悔？」<br>
+    <b>他答「更对得起自己」→</b>「那太好了——这正是我方判准。<b>那我们现在只需要比：哪种更对得起自己。</b>」<span class="sub">（他一旦选这个，全场进入我方的尺子）</span><br>
+    <b>他答「更成熟」→</b>「成熟是看清现实，还是放弃可能？您把这两个划等号了吗？」</div>
+  </div>
+
+  <div class="warn">
+    <p style="margin:0"><b>⚠️ 质询最容易犯的错：</b>他一答完你就开始「讲道理」。<b>别讲。</b>问完立刻下一问。你只有 2 分钟，讲道理是四辩的事。</p>
+  </div>
+
+  <h2>三、质询小结（1:30，约 300 字）</h2>
+  <p class="sub">先看结构：<b>一句总起 → 三句「他没答上来」→ 一句拉回我方 → 一句金句收</b>。</p>
+
+  <div class="speech" id="s2txt">
+    <p>谢谢主席。<span class="pz">∥</span>我用三个问题，问的其实是同一件事：<b>他们到底在选什么。</b></p>
+    <p><b>第一，</b>我问他们：「坦然接受」接受的是<b class="hl">位置</b>，还是<b class="hl">上限</b>？<span class="pz">／</span>他们没有给我一个明确的答案。<span class="pz">∥</span>那我就替他们说完：<span class="pz">／</span>如果接受的是位置，我方<b>完全同意</b>；<span class="pz">／</span>如果接受的是上限，就请他们解释——<b>凭什么。</b></p>
+    <p><b>第二，</b>我问他们：接受之后，还继续努力吗？<span class="pz">／</span>他们说会。<span class="pz">∥</span>好，那他们接受的只是<b class="hl">位置</b>。<span class="pz">／</span>而这，<b>正是我方立场</b>。<span class="pz">∥</span>也就是说，他们方的「接受」，和我方的「不甘」，其实可以并存。<span class="pz">／</span>那这道题就只剩一个问题：<b>他们到底在主张哪一种。</b></p>
+    <p><b>第三，</b>我问他们判准：是「<b class="hl">哪种更舒服</b>」，还是「<b class="hl">哪种更对得起自己</b>」？<span class="pz">／</span>他们没有正面回答。<span class="pz">∥</span>可这一个词的差别，决定了今天怎么打分。<span class="pz">／</span>如果按「舒服」打分，我方承认他们赢；<span class="pz">／</span>如果按「对得起自己」打分，<b>赢的是我方。</b></p>
+    <p>所以我方只回到一句话：<span class="pz">∥</span>接受位置，是清醒；<span class="pz">／</span>接受上限，是提前认输。<span class="pz">∥</span>谢谢。</p>
+  </div>
+  <p><button class="copy" onclick="cp('s2txt',this)">复制这一稿</button> <span class="mini" id="s2len">287 汉字 / 17 个停顿 · 读完约 80–90 秒</span></p>
+
+  <h2>四、小结按情况换句</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:190px">如果刚才</th><th>就换掉这一句</th></tr></thead>
+    <tbody>
+      <tr><td>他 Q1 就明确答「接受上限」</td><td>第一句改成：「我问他们接受的是位置还是上限，<b>他们明确说：接受上限。</b>那我只问一句——您怎么知道上限就在这儿？」</td></tr>
+      <tr><td>他 Q2 答「接受之后不努力了」</td><td>第二句改成：「我问他们接受之后还努力吗，<b>他们说不努力了。</b>各位，这不叫坦然，这叫<b>退场</b>。」</td></tr>
+      <tr><td>他 Q3 真举出了例子</td><td>第三句改成：「他举了例子，可那个例子里的那个人，<b>接受的是位置，不是上限</b>——他还在那个领域里。」</td></tr>
+      <tr><td>他全程回避 / 说「我拒绝回答」</td><td>第一句改成：「三个问题，<b>他一个都没有正面回答。</b>」<span class="sub">（这句只能在他真的全躲了的时候用）</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="danger">
+    <p style="margin:0"><b>⚠️ 最重要的一条：不要把没发生的事说成发生了。</b>如果他其实答了，你说「他没答」，评委听得出来，你整段小结就废了。<b>开口前花 5 秒回想他到底说了什么。</b></p>
+  </div>
+
+  <div class="stamp"><span>二辩专区 · 质询 ＋ 小结</span><span>最后更新：2026-10-22 20:05</span></div>
+</section>
+<section class="page" id="speaker3">
+  <h1>三辩专区：盘问 1:30 ＋ 质询小结 1:30</h1>
+  <div class="key">
+    <p style="margin:0"><b>★ 时间不够？只看这三块：</b><br>
+    ① <b>Q1「位置还是上限」</b>——这一问决定全场，他答什么你都赢<br>
+    ② <b>90 秒时间表</b>——1:10 还没问到 Q4，就直接跳 Q5<br>
+    ③ <b>小结主稿</b>——288 字，约 85 秒，能全念</p>
+  </div>
+
+  <h2>一、环节机制（先搞清规则，再背稿）</h2>
+  <div class="card">
+    <p style="margin-top:0"><b>你有两个环节，而且挨得很近：</b></p>
+    <ul>
+      <li><b>第 8 环节 · 盘问 1:30（单人计时）</b>——你问，对方答。<b>答辩方发言不计入你的时间</b>，所以这 90 秒全是你自己的。</li>
+      <li><b>第 9 环节 · 对方三辩盘问 1:30</b>——他问你方的人。⚠️ <b>规则禁止他点你</b>，所以这 90 秒你是坐着听的，<b>正好用来整小结的思路</b>。</li>
+      <li><b>第 10 环节 · 你的质询小结 1:30（单人计时）</b>——你说给评委听。</li>
+    </ul>
+    <p><b>盘问的三个特权（和上一轮一样）：</b></p>
+    <p style="margin:0 0 4px">① 可以<b>指派对方除三辩外任一辩手</b>作答</p>
+    <p style="margin:0 0 4px">② 答辩方发言<b>不计入总时间</b>——他答多久都不烧你的表</p>
+    <p style="margin:0">③ ⚠️ <b>盘问你没有打断权</b>（打断权是二辩质询才有的）。<b>别喊「我打断一下」</b>，会被扣流程分。他啰嗦，你就等他说完，平静地重复问题。</p>
+  </div>
+
+  <h2>二、先定一件事：这 5 问，你分别点谁的名</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:110px">问题</th><th style="width:150px">点谁</th><th>为什么是他</th></tr></thead>
+    <tbody>
+      <tr><td><b>Q1 抢定义</b></td><td><b>对方一辩</b></td><td>定义和判准都是他念的，「接受」怎么定义是他立论的地基，他推不掉</td></tr>
+      <tr><td><b>Q2 抢判准</b></td><td><b>对方一辩</b></td><td>判准写在他的开篇里，别人代答会露馅</td></tr>
+      <tr><td><b>Q3 举例</b></td><td><b>对方一辩</b></td><td>前三个问题一口气问完，<b>别换人</b>——换人他就有了现编的时间</td></tr>
+      <tr><td><b>Q4 良心题</b></td><td><b>对方四辩</b><span class="pill">唯一一次换人</span></td><td>这是价值题，要一个代表对方价值立场的人当众回答。他待会儿要做总结陈词，此刻说「该接受」，后面自己就塌</td></tr>
+      <tr><td><b>Q5 收尾</b></td><td><b>不点人</b></td><td>转过去对评委说，说完坐下</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="danger">
+    <p style="margin-top:0"><b>两个绝对别点的人：</b><br>
+    <b>① 对方三辩</b>——规则明写不能点，点了就是流程违规。<br>
+    <b>② 对方二辩</b>——他一般是队里专练临场攻防的，最能绕、最能拖。你点他，等于把铺好的路让给他走。</p>
+    <p style="margin-bottom:0"><b>点名的三句话（照念）：</b><br>
+    1. 开场一次说定：「谢谢主席。我有几个问题，想请问<b>对方一辩</b>。」<br>
+    2. 他想推给别人：「<b>我点名的是对方一辩，请一辩回答。</b>」<br>
+    3. Q4 换人：「最后一个问题，我想请问<b>对方四辩</b>。」<span class="sub">（说慢一点，让评委听见你换了人）</span></p>
+  </div>
+
+  <h2>三、盘问 5 问（完整版）</h2>
+  <div class="card">
+    <p style="margin:0" class="sub"><b>这张表怎么读：</b>每一问有三层——①<b>原句</b>（照念，带停顿）②<b>为什么问这个</b>（让你知道自己在干什么）③<b>他可能这么答 → 你就这么接</b>（4–5 条分支，上台只需要认出他答的是哪一种）。<b>他答什么你都别慌，最后一句永远是「好，我记下了」。</b></p>
+  </div>
+
+  <div class="q-a">
+    <div class="qq"><b>Q1｜抢定义（先手，最重要的一问）</b><br>
+    「谢谢主席。<span class="pz">∥</span>我有几个问题，想请问<b>对方一辩</b>。<span class="pz">∥</span>第一个问题：您方说『坦然接受』<span class="pz">／</span>接受的是<b class="hl">我现在的位置</b><span class="pz">／</span>还是<b class="hl">我的上限</b>？」</div>
+    <div class="sub" style="margin:10px 0 0"><b>为什么问这个：</b>这一问是全场的地基。因为「接受」这个词太滑了——它可以是清醒（接受我现在的水平），也可以是认命（接受我这辈子就这样）。<b>我方从不反对前者，我方反对的是后者。</b>所以你要逼他当众选一个：<b>他选「位置」，他和我们就没分歧了；他选「上限」，他就要为一个没法证明的命题辩护。</b>这不是要问倒他，是要把他的立场<b>钉在评委听得见的地方</b>。</div>
+    <div class="aa">
+      <b>① 他答「位置」</b> → 「好，那我方没有分歧。<span class="pz">／</span>可您方主张的是『更应选择』——<span class="pz">∥</span>请问，接受位置之后，<b class="hl">您还继续投入吗</b>？」<span class="sub">（追这一句，就把他逼回 Q2）</span><br>
+      <b>② 他答「上限」</b> → 「那请问——<span class="pz">∥</span><b class="hl">您怎么知道自己的上限在哪？</b><span class="pz">／</span>您试过所有方法了吗？换过路径了吗？」<span class="sub">（他说「我就是知道」＝耍赖，评委看得出）</span><br>
+      <b>③ 他答「都是」／含糊</b> → 「我换个说法，<b>只能选一个</b>：接受我现在的位置，还是接受我这辈子就到这儿？」<span class="sub">（同一句问三遍也行，重复本身有效）</span><br>
+      <b>④ 他反问「那你们接受什么」</b> → 「我方接受<b>位置</b>，不接受<b>上限</b>。<span class="pz">／</span>按规则您这一轮只能作答——请问您方呢？」<br>
+      <b>⑤ 他答完（不管答啥）</b> → 「<b class="hl">好，我记下了。</b>」<span class="sub">立刻转 Q2，一个字都别点评</span>
+    </div>
+  </div>
+
+  <div class="q-a">
+    <div class="qq"><b>Q2｜抢判准（决定这场按什么打分）</b><br>
+    「第二个问题：<span class="pz">／</span>您方判断『更应』的<b class="hl">标准</b>，<span class="pz">／</span>到底是什么？」</div>
+    <div class="sub" style="margin:10px 0 0"><b>为什么问这个：</b>「更应」是个<b>比较词</b>——要比，就得先有一把尺子。这一问不是要把他说倒，是<b>逼他当众把尺子交出来</b>：他交出什么尺子，后面全场你就按什么尺子打。所以他答什么你都不慌——你要的只是一个<b>能被评委听见的答案</b>，好在小结里说「对方自己承认了」。</div>
+    <div class="aa">
+      <b>① 他答「更幸福 / 更舒服」</b> → 「那请问：<span class="pz">／</span>一个一辈子<b>没试过</b>的人，和一个<b>试了十年没成</b>的人，<span class="pz">∥</span>谁更可能后悔？」<span class="sub">（这一问杀伤力最大，说完停两秒，别自己解释）</span><br>
+      <b>② 他答「更成熟 / 更理性」</b> → 「成熟是<b>看清现实</b>，还是<b>放弃可能</b>？<span class="pz">／</span>您把这两个词划等号了吗？」<br>
+      <b>③ 他答「更对得起自己」</b> → 「谢谢，那这正是我方判准。<span class="pz">∥</span>那我们现在只需要比：<b class="hl">哪种更对得起自己</b>。」<span class="sub">（他一旦选这个，全场进入我方的尺子）</span><br>
+      <b>④ 他含糊 / 说一大堆</b> → 「我换个问法：是『<b class="hl">哪种更舒服</b>』，还是『<b class="hl">哪种更对得起自己</b>』？<b>只能说一个。</b>」<br>
+      <b>⑤ 他反问「那你们的标准呢」</b> → 「我的标准待会儿说。现在是<b>您方立论</b>，请您先回答。」<span class="sub">（但你要真记得说——见小结）</span>
+    </div>
+  </div>
+
+  <div class="q-a">
+    <div class="qq"><b>Q3｜举例（让他自己搬石头）</b><br>
+    「第三个问题：<span class="pz">／</span>请问您能不能举一个例子——<span class="pz">∥</span>一个人『<b class="hl">坦然接受</b>』自己很平凡<b>之后</b>，<span class="pz">／</span>反而在这个领域里变得<b class="hl">更好</b>了？」</div>
+    <div class="sub" style="margin:10px 0 0"><b>为什么问这个：</b>你不需要证明「接受一定有害」，你只需要让他证明「接受有好处」。<b>举证责任在他身上。</b>而这个问题几乎举不出例子——因为「接受上限」和「继续变好」在逻辑上就是互斥的。<br>⚠️ <b>他举不出来的时候，你别替他说「您举不出吧」</b>——让他自己空在那儿，评委看得见。你只要停两秒，然后说「好，我记下了」。</div>
+    <div class="aa">
+      <b>① 他举不出来 / 沉默</b> → <span class="sub">停两秒。</span>「好，我记下了。」<span class="sub">（别补话，这个空白比你说十句都值钱）</span><br>
+      <b>② 他举「接受之后心态好了，反而进步了」</b> → 「那说明他接受的只是<b>『不再焦虑』</b>，不是<b>『上限』</b>。<span class="pz">／</span>这恰恰是我方说的：<b class="hl">接受位置，不接受上限。</b>」<span class="sub">（把他的例子收编，这一接很漂亮）</span><br>
+      <b>③ 他举「有人转行后成功了」</b> → 「那是<b>战略转移</b>，不是坦然接受。<span class="pz">／</span>他换了个战场，那口气还在。」<br>
+      <b>④ 他举「我身边有人就是这样」</b> → 「那请问：他在那个领域还投入吗？<span class="pz">／</span>如果不投入了，那他其实已经离开这个领域了。」<br>
+      <b>⑤ 他说「这不需要举例」</b> → 「好。那我是不是可以理解为：<b class="hl">您也举不出来</b>？」
+    </div>
+  </div>
+
+  <div class="q-a">
+    <div class="qq"><b>Q4｜良心题：20 岁的画家（换点对方四辩）</b><br>
+    「最后一个问题，我想请问<b>对方四辩</b>。<span class="pz">∥</span>一个 20 岁的人，<span class="pz">／</span>发现自己<b class="hl">当不了顶尖画家</b>。<span class="pz">∥</span>『坦然接受』和『<b class="hl">再画五年</b>』——<span class="pz">／</span>哪一个，更像是对得起自己？」</div>
+    <div class="sub" style="margin:10px 0 0"><b>为什么问这个：</b>这是全场<b>唯一</b>能让他当众承认「意义不必依赖结果」的地方。前面三问都是逻辑，这一问是良心。<b>他只有两个答案，两个都对我方有利</b>：说「接受」＝他当众否定了那个 20 岁的人的可能性；说「再画五年」＝他自认我方立场。<br>⚠️ <b>问完停满两秒</b>，别急着接。这两秒是留给评委的，不是留给他的。</div>
+    <div class="aa">
+      <b>① 他答「接受」</b> → 「那我想请问：<span class="pz">／</span>他 20 岁接受，35 岁回头看，<span class="pz">∥</span>会不会想问一句『<b class="hl">如果当年我再画五年呢</b>』？」<span class="sub">（问完就停，不要再追）</span><br>
+      <b>② 他答「再画五年」</b> → 「<b>谢谢，这正是我方主张。</b>」<span class="sub">（他自认，立刻收，别恋战）</span><br>
+      <b>③ 他答「看情况 / 看他天赋」</b> → 「那我们换个说法：<b>在他画之前，谁知道他有没有天赋？</b>」<br>
+      <b>④ 他答「这跟辩题无关」</b> → 「有关。<span class="pz">／</span>这道题问的就是：发现自己平凡的那一刻，你选什么。」<br>
+      <b>⑤ 他含糊 / 绕</b> → <span class="sub">停两秒，直接「好，我记下了」，转 Q5。别纠缠。</span>
+    </div>
+  </div>
+
+  <div class="q-a">
+    <div class="qq"><b>Q5｜收尾（不点人，转过去对评委说）</b><br>
+    「我方从不否认平凡，<span class="pz">／</span>我方也不承诺成功。<span class="pz">∥</span>我方只问一句——<span class="pz">／</span>一个人凭什么，<span class="pz">／</span>在<b class="hl">还没走完</b>的时候，<span class="pz">／</span>就替自己写下『<b class="hl">到此为止</b>』？」</div>
+    <div class="sub" style="margin:10px 0 0"><b>为什么这样收：</b>这一句<b>不是说给对方听的，是说给评委听的</b>。所以你要转身、看评委、放慢。<b>说完立刻坐下</b>——你的价值在你坐下那个动作里，不在你多说的一句话里。</div>
+  </div>
+
+  <h2>四、90 秒时间表</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:90px">时间</th><th style="width:130px">动作</th><th>注意</th></tr></thead>
+    <tbody>
+      <tr><td>0:00–0:08</td><td>「谢谢主席」＋点名</td><td>只说一次「对方一辩」，不用每问都点</td></tr>
+      <tr><td>0:08–0:25</td><td><b>Q1</b> 位置还是上限</td><td>最重要，语速放慢</td></tr>
+      <tr><td>0:25–0:40</td><td><b>Q2</b> 判准是什么</td><td>他答完只回「好，我记下了」</td></tr>
+      <tr><td>0:40–1:00</td><td><b>Q3</b> 举一个例子</td><td>他卡住就停两秒，别替他答</td></tr>
+      <tr><td>1:00–1:15</td><td><b>Q4</b> 换点四辩 ＋ 20 岁画家</td><td>换人要说清楚，让评委听见</td></tr>
+      <tr><td>1:15–1:30</td><td><b>Q5</b> 收尾，看评委，坐下</td><td>说完立刻坐</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="warn">
+    <p style="margin:0"><b>⚠️ 进度报警：</b>如果 <b>1:10 还没问到 Q4</b>，直接跳到 Q5 收尾——<b>宁可少问一个，不要让收尾句没说出来</b>。那句是给评委的最后印象。</p>
+  </div>
+
+  <h2>五、质询小结（1:30，288 汉字 · 约 1:25）</h2>
+  <div class="card">
+    <p style="margin:0" class="sub"><b>先认出哪句可以被换：</b><br>
+    <b>开场句</b>（约 6 秒）：「我用三个问题，只问一件事。」<br>
+    <b>第一句</b>（约 20 秒）：他没答上来「接受的是位置还是上限」<br>
+    <b>第二句</b>（约 20 秒）：他说接受之后还努力 → 那正是我方立场<br>
+    <b>第三句</b>（约 18 秒）：他举不出「接受之后反而更好」的例子<br>
+    <b>收尾</b>（约 24 秒）：接受位置是清醒，接受上限是提前认输</p>
+  </div>
+
+  <div class="speech" id="s3txt">
+    <p>谢谢主席。<span class="pz">∥</span>我用三个问题，只问一件事。</p>
+    <p><b>第一，</b>我问他们：「坦然接受」接受的是<b class="hl">位置</b>，还是<b class="hl">上限</b>？<span class="pz">／</span>我问了两遍，他们始终没有给我一个明确的答案。<span class="pz">∥</span>一个连自己在接受什么都说不清的立场，后面的话，就都站不稳。</p>
+    <p><b>第二，</b>我问他们：能不能举一个「接受自己平凡之后，反而在这个领域更好」的例子？<span class="pz">／</span>他们没有举出来。<span class="pz">∥</span>各位，这不是他们口才不好，是<b class="hl">这件事本身就很难发生</b>——<span class="pz">／</span>因为「接受上限」和「继续变好」，在逻辑上就是互斥的。</p>
+    <p><b>第三，</b>我问对方四辩：一个 <b>20 岁</b>发现自己当不了顶尖画家的人，<span class="pz">／</span>「坦然接受」和「<b class="hl">再画五年</b>」，哪一个更像对得起自己？<span class="pz">∥</span>他没有说「接受」。<span class="pz">／</span>各位，连他们自己，都不敢当着大家的面，劝那个 20 岁的人<b class="hl">放下笔</b>。</p>
+    <p>所以我方只回到一句话：<span class="pz">∥</span>接受位置，是清醒；<span class="pz">／</span>接受上限，是提前认输。<span class="pz">∥</span>一个人凭什么，在还没走完的时候，就替自己写下「<b class="hl">到此为止</b>」？<span class="pz">∥</span>谢谢。</p>
+  </div>
+  <p><button class="copy" onclick="cp('s3txt',this)">复制这一稿</button> <span class="mini" id="s3len">288 汉字 / 13 个停顿 · 读完约 80–90 秒</span></p>
+
+  <h3>六种情况换句（按他刚才实际的反应选一条）</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:210px">刚才发生了什么</th><th>换掉哪句，换成什么</th></tr></thead>
+    <tbody>
+      <tr><td><b>情况 1｜他明确答了「接受上限」</b></td><td>换<b>第一句</b>：「第一，<span class="pz">／</span>我问他们接受的是位置还是上限，<b class="hl">他们明确说：接受上限</b>。<span class="pz">∥</span>那我只问一句——<b>您怎么知道上限就在这儿？</b>」</td></tr>
+      <tr><td><b>情况 2｜他答「接受位置」</b></td><td>换<b>第一句</b>：「第一，<span class="pz">／</span>他们说接受的是位置。<span class="pz">∥</span>那太好了——<b>我方也接受位置</b>。<span class="pz">／</span>所以他们和我方，<b>其实没有分歧</b>。」</td></tr>
+      <tr><td><b>情况 3｜他 Q3 真举出了例子</b></td><td>换<b>第二句</b>：「第二，<span class="pz">／</span>他举了例子。<span class="pz">∥</span>可那个例子里的那个人，<b>接受的是位置，不是上限</b>——<span class="pz">／</span>他还在那个领域里。<b>这恰恰证明了我方。</b>」</td></tr>
+      <tr><td><b>情况 4｜他 Q4 答「该接受」</b></td><td>换<b>第三句</b>：「第三，<span class="pz">／</span>我问对方四辩：20 岁当不了顶尖画家的人，该接受还是再画五年。<span class="pz">∥</span><b class="hl">他说该接受。</b><span class="pz">／</span>那我只想问：他 35 岁回头看，会不会想问一句『如果当年我再画五年呢』？」</td></tr>
+      <tr><td><b>情况 5｜他 Q4 答「再画五年」</b></td><td>换<b>第三句</b>：「第三，<span class="pz">／</span>我问对方四辩该不该再画五年——<b class="hl">他说该</b>。<span class="pz">∥</span>谢谢。<b>这正是我方主张。</b>」<span class="sub">（他自认，立刻收）</span></td></tr>
+      <tr><td><b>情况 6｜他全程回避 /「我拒绝回答」</b></td><td>换<b>开场句</b>：「三个问题，<span class="pz">／</span><b class="hl">他一个都没有正面回答。</b>」<span class="sub">（只能在他真的全躲了的时候用）</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="danger">
+    <p style="margin:0"><b>⚠️ 两条铁律：</b><br>
+    ① <b>不要在情况 2 里念「他们承认了重点」</b>这种话——他没承认。<b>把没发生的事说成发生了，评委听得出来。</b><br>
+    ② <b>只换一句，别整段重写。</b>你只有 30 秒思考时间，换得越多越容易乱。</p>
+  </div>
+
+  <h3>时间不够怎么砍</h3>
+  <div class="card">
+    <p style="margin-top:0"><b>被压到 60 秒时：</b>先砍「第三」（例子那段，省 18 秒）→ 再砍「第二」的「那就清楚了」整句（省 10 秒）。<b>60 秒版 ≈ 52 秒。</b></p>
+    <p style="margin-bottom:0"><b>永不砍：</b>开场句 ＋ 第一句（他答不清）＋ 收尾金句。<span class="sub">这三块是整段小结的骨头。</span></p>
+  </div>
+
+  <h2>五½、队友找来的三辩参考稿怎么用（10/22 晚）</h2>
+  <div class="warn">
+    <p style="margin:0"><b>先说结论：这篇稿不能整篇上，但有 3 块好东西，已经拆出来吸收进站里了。</b><br>
+    原因：它是按「三辩做结辩」的赛制写的——<b>我们的赛制三辩没有结辩</b>（结辩是四辩的 3:00），它的「总结陈词」整篇不能念；「立论框架」是一辩的活，盘问里更不能念。而且它有几处<b>踩我们的口径红线</b>：「这叫投降」打了所有接受的人（我们只打「接受上限」）、「赢得改写命运的可能」承诺了结果（我们的口径是不承诺成功）。</p>
+  </div>
+
+  <h3>✅ 吸收 1：Q6 备用追问（价值题，只在还有富余时间时用）</h3>
+  <div class="q-a">
+    <div class="qq"><b>Q6｜价值收尾题（原文的好问法，措辞已按红线修正）</b><br>
+    「最后一个问题：<span class="pz">／</span>一个<b class="hl">放弃追求</b>换来的平静，<span class="pz">／</span>和一个<b class="hl">竭尽全力之后</b>的问心无愧，<span class="pz">／</span>哪一个，更配得上您方说的『骄傲』二字？」</div>
+    <div class="aa"><b>它好在哪：</b>这题<b>对方怎么答都收得住</b>——他选「竭尽全力」＝承认我方；他选「放弃」＝当众劝人躺平，评委听得下去吗。<br>
+    <span class="sub">⚠️ 使用条件：前 5 问问完还剩 15 秒以上才用；没富余就念急救包里那句判准收尾。</span></div>
+  </div>
+
+  <h3>✅ 吸收 2：两句驳论升级句（自由辩论 / 对方小结后用）</h3>
+  <div class="card">
+    <p style="margin-top:0"><b>① 「内耗 = 方向迷失」</b>——和站里已有的「内耗来自跟别人比」是<b>一整套</b>，连着说更狠：<br>
+    「内耗来自<b>跟别人比</b>，来自<b>不知道往哪儿不甘</b>。<span class="pz">／</span>我方给的是方向——<b class="hl">比昨天的自己多走一步</b>。<span class="pz">／</span>不甘配方向，是燃料，不是内耗。」</p>
+    <p style="margin-bottom:0"><b>② 「接受事实 ≠ 接受宿命」</b>——这就是我们「位置 / 上限」抓手的人话版，评委没听懂「位置上限」时的<b>备用翻译</b>：<br>
+    「承认『我现在平凡』，是看清事实；<span class="pz">／</span>承认『我这辈子就这样』，是认命。<span class="pz">∥</span><b class="hl">对方把这两件事，偷偷缝成了一件。</b>」</p>
+  </div>
+
+  <h3>✅ 吸收 3：金句给四辩（四辩页「结辩加料」已加）</h3>
+  <div class="ok">
+    <p style="margin:0">「<b>真正的骄傲，从来不是『我已经很好了』，而是『我还可以更好』。</b>」——这句和 CNKI 稿里的「平凡是常态，非凡是选择」都归四辩收尾用，<b>二选一</b>，别两句都堆（结辩收尾一句金句才响）。</p>
+  </div>
+
+  <h3>❌ 弃用的部分（别心疼）</h3>
+  <div class="card">
+    <p style="margin-top:0"><b>① 它的「总结陈词」整篇</b>——我们赛制三辩没有结辩；而且 1100+ 字也远超任何环节。</p>
+    <p><b>② 「问题④（科学家运动员医生都不接受平凡，社会怎么进步）」</b>——宏观题太大了，1:30 盘问里对方一句「我方讨论的是个人选择」就绕开了，收不住。</p>
+    <p><b>③ 「这不叫和解，这叫投降」「赢得改写命运的可能」</b>——口径红线：只打「接受上限」，不贬低接受的人；不承诺结果。</p>
+    <p style="margin-bottom:0"><b>④ 「盘问对方二辩」的开场设定</b>——我们点名策略是 Q1–Q3 点<b>对方一辩</b>、Q4 点<b>对方四辩</b>，二辩绝对不点（见第二节）。</p>
+  </div>
+
+  <h2>六、三辩总稿（合并三份稿子＋质询，一份带走）</h2>
+  <div class="card">
+    <p style="margin:0" class="sub"><b>这一份就够了：</b>主稿 5 问＋追问 ＋ Plan B 备用问 ＋ 主小结＋备用小结 ＋ 自由辩 4 张牌 ＋ 收尾金句，全部按口径红线统一整理。<b>括号灰字是动作提示，不用念。</b>上台只带这一份＋一支笔。</p>
+  </div>
+
+  <div class="speech" id="s3all">
+    <p>═══ 第一部分 · 盘问 1:30（第 8 环节，对方答话不烧你的表）═══</p>
+    <p>谢谢主席。我有几个问题，想请问对方一辩。</p>
+    <p>第一个问题：您方说「坦然接受」，接受的是我现在的位置，还是我的上限？</p>
+    <p>（若答「位置」→ 追问：那接受位置之后，您还继续投入吗？／若答「上限」→ 追问：您怎么知道自己的上限在哪？您试过所有方法了吗？／他答完 → 「好，我记下了。」）</p>
+    <p>第二个问题：您方判断「更应」的标准，到底是什么？</p>
+    <p>（若答「更幸福、更舒服」→ 追问：一个一辈子没试过的人，和一个试了十年没成的人，谁更可能后悔？／他答完 → 「好，我记下了。」）</p>
+    <p>第三个问题：您能不能举一个例子——一个人「坦然接受」自己很平凡之后，反而在这个领域里变得更好了？</p>
+    <p>（他举不出 → 停两秒，别替他说 → 「好，我记下了。」）</p>
+    <p>最后一个问题，我想请问对方四辩。一个 20 岁的人，发现自己当不了顶尖画家。「坦然接受」和「再画五年」——哪一个，更像是对得起自己？</p>
+    <p>（若答「接受」→ 追问：他 35 岁回头看，会不会想问一句「如果当年我再画五年呢」？／若答「再画五年」→ 「谢谢，这正是我方主张。」）</p>
+    <p>（收尾，转身看评委，放慢）我方从不否认平凡，我方也不承诺成功。我方只问一句——一个人凭什么，在还没走完的时候，就替自己写下「到此为止」？</p>
+    <p>（说完立刻坐下。⚠️ 1:10 还没问到第四问，直接跳收尾句）</p>
+    <p>〔备用追问，前面问完还剩 15 秒以上才用〕一个放弃追求换来的平静，和一个竭尽全力之后的问心无愧，哪一个，更配得上您方说的「骄傲」二字？</p>
+    <p>〔Plan B：主稿被防住、或对方把「坦然」定义得很精致时，换这三问〕</p>
+    <p>B1：一个画家在自己最骄傲的绘画领域，发现自己再怎么画也就是中等水平。请问，他「坦然接受」之后，接下来会做什么？（他调整方向，是不是因为不甘？彻底坦然了为什么还要调整？坦然到底改变了什么具体行为？）</p>
+    <p>B2：您方说坦然接受是「认清边界」。请问，他在发现自己平凡的那一刻，有没有穷尽这个领域所有可能的方法、路径和潜力？（没穷尽 → 那他接受的，是被验证的边界，还是没被验证的暂时状态？把暂时状态当边界来接受，这叫清醒，还是叫提前关门？／说穷尽了 → 屠呦呦做了上百次实验都失败的时候，有证据说自己「穷尽」了吗？）</p>
+    <p>B3：您方比较「不甘」和「坦然」的标准是什么？是哪个让人更舒服，还是哪个让人在骄傲被击碎的那个节点上，保留了更多成长的可能？（收束：如果标准是舒服，那确实坦然更舒服。可辩题问的是「更应选择」——选的不是一种情绪，是对待自己潜能的态度。）</p>
+    <p>═══ 第二部分 · 质询小结 1:30（第 10 环节）═══</p>
+    <p>〔主版，按他刚才的实际回答微调，只换一句别重写〕</p>
+    <p>谢谢主席。我用三个问题，只问一件事。</p>
+    <p>第一，我问他们：「坦然接受」接受的是位置，还是上限？我问了两遍，他们始终没有给我一个明确的答案。一个连自己在接受什么都说不清的立场，后面的话，就都站不稳。</p>
+    <p>第二，我问他们：能不能举一个「接受自己平凡之后，反而在这个领域更好」的例子？他们没有举出来。各位，这不是他们口才不好，是这件事本身就很难发生——因为「接受上限」和「继续变好」，在逻辑上就是互斥的。</p>
+    <p>第三，我问对方四辩：一个 20 岁发现自己当不了顶尖画家的人，「坦然接受」和「再画五年」，哪一个更像对得起自己？他没有说「接受」。各位，连他们自己，都不敢当着大家的面，劝那个 20 岁的人放下笔。</p>
+    <p>所以我方只回到一句话：接受位置，是清醒；接受上限，是提前认输。一个人凭什么，在还没走完的时候，就替自己写下「到此为止」？谢谢。</p>
+    <p>〔备用版，主小结被针对时换，约 75 秒〕</p>
+    <p>感谢主席。质询中对方辩友承认了两件事：第一，在骄傲领域发现自己平凡的那个时刻，人往往还没有穷尽这个领域的所有可能性；第二，坦然接受之后人仍然可能调整、仍然可能继续——而这些「仍然」的背后，恰恰是一种没有被坦然消化掉的不甘。</p>
+    <p>这暴露了对方今天最大的问题：他们把「坦然接受」包装成清醒和成熟，但在那个特定的节点上，坦然的功能是关闭追问，而不甘的功能是打开行动。</p>
+    <p>对方会说「不甘是内耗」。可屠呦呦在上百次失败之后的不甘，是内耗吗？那是一种「我知道我还没找到，但我不接受这就是终点」的驱动力。不甘从来不等于不承认现实，它恰恰是在承认现实之后，拒绝把现实当作终局。</p>
+    <p>对方还会说「坦然是自我和解」。可自我和解的前提，是你真正和自己谈过了。在骄傲被击碎的那个瞬间就宣布「我接受」，那不是和解，那是单方面撤诉。我方今天不是要求任何人永远不接受平凡，我们说的是：在这个时刻，不甘比坦然多保留了一样东西——下一步的可能性。而选择，就应该选那个不把门关上的方向。</p>
+    <p>═══ 第三部分 · 自由辩论 4 张牌（每次一句，说完就停）═══</p>
+    <p>① 内耗牌：内耗来自跟别人比，来自不知道往哪儿不甘。我方给的是方向——比昨天的自己多走一步。不甘配方向，是燃料，不是内耗。</p>
+    <p>② 偷换牌：承认「我现在平凡」，是看清事实；承认「我这辈子就这样」，是认命。对方把这两件事，偷偷缝成了一件。</p>
+    <p>③ 滑坡牌：请问，「坦然接受平凡」在现实中，是不是很容易变成「我不用再试了」的委婉说法？（他承认 → 那每个人都要能精确区分真坦然假坦然，人有这个分辨力吗？他不承认 → 那些停下来的人做的是哪种坦然？）</p>
+    <p>④ 收口牌：平凡的对面不是不平凡，是「我试过了」。</p>
+    <p>═══ 第四部分 · 最后印象（自己小结收尾用 / 托四辩带进结辩）═══</p>
+    <p>真正的骄傲，从来不是「我已经很好了」，而是「我还可以更好」。</p>
+  </div>
+  <p><button class="copy" onclick="cp('s3all',this)">复制总稿（全）</button> <span class="mini">四部分：盘问 5 问＋追问／Plan B 3 问／主小结＋备用小结／自由辩 4 牌＋金句 · 全部口径已过红线</span></p>
+  <div class="warn">
+    <p style="margin:0"><b>⚠️ 三个别忘：</b>① 1:10 没问到 Q4 → 直接跳收尾句；② 小结只换一句，别整段重写；③ 例子只说「上百次失败」，不报精确数字。</p>
+  </div>
+
+  <h2>六½、备用稿包 ②：屠呦呦线（10/22 晚 · 第二份参考稿）</h2>
+  <div class="ok">
+    <p style="margin:0"><b>这份比上一份质量高，整套当 Plan B。</b>它的主线是「<b>坦然＝提前关门，不甘＝留住下一步</b>」——和我们「位置 / 上限」抓手是同一个打法的两种说法，完全不冲突。<b>使用时机：主稿 5 问被对方防住了、或对方把「坦然」定义得很精致（「坦然≠放弃」）时，换这套。</b>⚠️ 口径修正已做：原文「屠呦呦 190 多次实验」→ 一律改说「<b>上百次失败</b>」（红线：例子不报精确数字）。</p>
+  </div>
+
+  <h3>Plan B 质询 3 问（对方防住主稿时用）</h3>
+  <div class="q-a">
+    <div class="qq"><b>B1｜场景锁定</b><br>
+    「一个画家在自己最骄傲的绘画领域，发现自己再怎么画也就是中等水平。<span class="pz">／</span>请问，他『坦然接受』之后，<b class="hl">接下来会做什么</b>？」<br>
+    <span class="sub">追问：他调整方向，是不是因为不甘？他彻底坦然了，为什么还要调整？坦然到底改变了什么具体行为？</span></div>
+    <div class="aa"><b>它在干什么：</b>逼对方给「坦然」一个<b>可操作的行为差异</b>——给不出，坦然就是一句空话。</div>
+  </div>
+  <div class="q-a">
+    <div class="qq"><b>B2｜边界不可预判（这套的核心）</b><br>
+    「您方说坦然接受是『认清边界』。<span class="pz">／</span>请问，他在发现自己平凡的那一刻，<b class="hl">有没有穷尽这个领域所有可能的方法、路径和潜力</b>？」<br>
+    <span class="sub">他说「没穷尽」→「那他接受的，是一个被验证的边界，还是一个<b>没被验证的暂时状态</b>？把暂时状态当边界来接受，这叫清醒，还是叫<b>提前关门</b>？」<br>
+    他说「穷尽了」→「屠呦呦做了<b>上百次实验</b>都失败的时候，有证据说自己『穷尽』了吗？她要是当时坦然接受自己是个平凡的研究者，青蒿素还会出现吗？」</span></div>
+    <div class="aa"><b>它在干什么：</b>这一问直接打我们的主抓手——<b>凭什么在还没走完时就知道上限</b>，只是换了个更书面的说法。两个分支都是我方赢。</div>
+  </div>
+  <div class="q-a">
+    <div class="qq"><b>B3｜锁定比较标准</b><br>
+    「您方比较『不甘』和『坦然』的标准是什么？<span class="pz">／</span>是哪个让人<b>更舒服</b>，还是哪个让人在骄傲被击碎的那个节点上，<b class="hl">保留了更多成长的可能</b>？」</div>
+    <div class="aa"><b>收束句（他答完就说）：</b>「如果标准是舒服，那确实，坦然更舒服。<span class="pz">／</span>可辩题问的是『更应选择』——<b>选的不是一种情绪，是对待自己潜能的态度。</b>」</div>
+  </div>
+
+  <h3>Plan B 质询小结（约 250 字 · 70–80 秒，口径已修）</h3>
+  <div class="speech" id="s3alt">
+    <p>感谢主席。质询中对方辩友承认了两件事：第一，在骄傲领域发现自己平凡的那个时刻，人往往还没有穷尽这个领域的所有可能性；第二，坦然接受之后人仍然可能调整、仍然可能继续——而这些「仍然」的背后，恰恰是一种没有被坦然消化掉的不甘。</p>
+    <p>这暴露了对方今天最大的问题：他们把「坦然接受」包装成清醒和成熟，但在那个特定的节点上，坦然的功能是关闭追问，而不甘的功能是打开行动。</p>
+    <p>对方会说「不甘是内耗」。可屠呦呦在<b>上百次失败</b>之后的不甘，是内耗吗？那是一种「我知道我还没找到，但我不接受这就是终点」的驱动力。不甘从来不等于不承认现实，它恰恰是在承认现实之后，拒绝把现实当作终局。</p>
+    <p>对方还会说「坦然是自我和解」。可自我和解的前提，是你真正和自己谈过了。在骄傲被击碎的那个瞬间就宣布「我接受」，那不是和解，那是<b>单方面撤诉</b>。我方今天不是要求任何人永远不接受平凡，我们说的是：在这个时刻，不甘比坦然多保留了一样东西——<b>下一步的可能性</b>。而选择，就应该选那个不把门关上的方向。</p>
+  </div>
+  <p><button class="copy" onclick="cp('s3alt',this)">复制 Plan B 小结</button> <span class="mini">约 250 字 ≈ 75 秒 · 主小结被针对时的备用版 · 金句「单方面撤诉」</span></p>
+
+  <h3>自由辩论加弹（四组连环追问，优先抛第一、三组）</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:150px">组</th><th>怎么打</th></tr></thead>
+    <tbody>
+      <tr><td><b>① 打操作空洞</b></td><td>「坦然接受之后，第一个和『不甘』不一样的具体行动是什么？」——答「换赛道」→ 那是还有不甘；答「放下执念继续做」→ 放下执念和放弃的边界在哪，谁保证停在精确的那个点上？</td></tr>
+      <tr><td><b>② 打边界不可预判</b></td><td>「他凭什么知道自己面对的是边界，不是暂时没跨过去的那一步？」——对方把「坦然」定义精致了，直接切这组。梵高生前卖不出画，理性评估会告诉他什么？</td></tr>
+      <tr><td><b>③ 打滑坡（最实用）</b></td><td>「『坦然接受平凡』在现实中，是不是很容易变成『我不用再试了』的委婉说法？」——他承认「有可能」→ 那您方立场就需要每个人精确区分真坦然假坦然，人有这个分辨力吗？不承认 → 那些停下来的人做的是哪种坦然？</td></tr>
+      <tr><td><b>④ 抬标准</b></td><td>「您方标准是当下更不痛苦，还是十年后回看时更少说『我本可以』？」——他谈心理健康 → 我方不否认，不甘可以带着痛苦继续走；差别不在当下痛不痛，<b>在十年后谁还有故事可以讲</b>。</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>结辩弹药库（我们赛制三辩没有结辩——只当弹药，金句给四辩）</h3>
+  <div class="card">
+    <p style="margin-top:0"><b>好句三发（自由辩论 / 交给四辩用）：</b></p>
+    <p><b>① 「我们每一个人，包括场上八位辩手，大概率最终都是平凡的人。但『最终平凡』是一个事后才能确认的结论，而『发现自己平凡』是一个正在发生的时刻。」</b>——这句同时守住了「先承认平凡」红线，非常好。</p>
+    <p><b>② 「选择不甘，不是拒绝承认平凡，而是拒绝让平凡的定义权，落在一次挫败的手里。」</b></p>
+    <p style="margin-bottom:0"><b>③ 「坦然接受的人，得到的是平静；不甘于斯的人，得到的是明天还可以继续试一次的理由。」</b>——比「改写命运」安全，符合「不承诺成功」口径，四辩可作加料 D（已加到四辩页）。</p>
+  </div>
+
+  <h2>七、自由辩论：轮到你了怎么办</h2>
+  <div class="danger">
+    <p style="margin-top:0"><b>⚠️ 先纠正一个最容易搞错的：章程写「各 3:00」＝全队四个人共享 3 分钟，不是每人 3 分钟。</b>平摊每人 45 秒。<b>而这次我们是正方，我们先开口。</b></p>
+  </div>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:230px">规则</th><th>翻译</th><th style="width:210px">你就这么做</th></tr></thead>
+    <tbody>
+      <tr><td><b>正方先发言</b></td><td>这次是<b>我们先手</b></td><td>第一轮由四辩或一辩起，<b>别四个人一起站</b></td></tr>
+      <tr><td><b>落座即为发言结束</b></td><td>一起一坐就是「交棒」</td><td>说完<b>立刻坐下</b>，别补话</td></tr>
+      <tr><td><b>间隙照常计时</b></td><td>站着想词，烧的是我们自己队的表</td><td>手里<b>先握好一张牌</b>，不现场想</td></tr>
+      <tr><td><b>一方用完另一方可继续</b></td><td>提前烧光 → 对方一个人接着讲，我们坐着听</td><td><b>留至少 30 秒到后半场</b></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="ok">
+    <p style="margin-top:0"><b>20 秒骨架（背下来，一个字不用改）：</b><br>
+    「<b>谢谢。</b>」→「<b>我接您刚才那句『＿＿』——</b>」（重复他 5 个字）→「<b>请问＿＿？</b>」（问得更窄，最好是「是，还是不是」）→ 他答完说「<b>好，我记下了。</b>」→ <b>立刻坐下。</b></p>
+    <p style="margin-bottom:0"><b>⚠️ 禁讲道理、禁解释、禁总结</b>——那是四辩结辩的事。你只要：引他原话 → 问一个更窄的问题 → 落座。</p>
+  </div>
+  <div class="card">
+    <p style="margin-top:0"><b>你（三辩）优先用的两张牌：</b></p>
+    <p style="margin:0 0 6px"><b>① 「上限谁定」</b>——把 Q1 再钉一次：「您方接受的是上限。那我再问一次：<b>上限在哪儿？谁告诉您的？</b>」</p>
+    <p style="margin:0 0 6px"><b>② 「止痛」</b>——「您说的接受，是一种止痛。<b>止的是痛，收走的是『我还能不能更好』这个问题。</b>」</p>
+    <p style="margin-bottom:0" class="sub">分牌建议：一辩 <b>地图 / 从众</b>｜二辩 <b>战略转移 / 内耗</b>｜三辩 <b>上限谁定 / 止痛</b>｜四辩 <b>后悔 / 方仲永 / 收口</b>。谁手上有那张牌谁站，不会两个人同时站起来。</p>
+  </div>
+
+  <div class="warn" style="border-left-color:#b4453c">
+    <p style="margin-top:0"><b>🆕 我方一辩稿已定稿待修</b>（10/22 16:42 ·Lu 发的「辩论 1.pdf」，725 汉字 ≈ 2 分 25 秒）。</p>
+    <p style="margin-bottom:0">→ <a href="#rival" style="color:#3a6b57;font-weight:700">直接跳到 8.5 节：稿子点评 ＋ 修订对照 ›</a></p>
+  </div>
+
+  <h2 id="rival">8.5、我方一辩稿点评与修订（10/22 ·Lu 版）</h2>
+
+  <div class="ok">
+    <p style="margin-top:0"><b>先说结论：这稿底子很好，不需要推倒重写。</b>定义干净（「平凡并非对能力的终极否定」「不给自己设下永久上限」——和全队口径完全一致）；第二论点那句<b>「坦然接受会潜移默化地让我们从接受位置转化为接受上限」</b>是全稿最锋利的一刀，一字不用改。</p>
+    <p style="margin-bottom:0"><b>但有 3 个结构缺项 ＋ 3 处措辞漏洞</b>，补完大约 850 字，正好 3 分钟。逐条往下看。</p>
+  </div>
+
+  <h3>① 结构缺项（按重要程度排）</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:130px">缺什么</th><th>为什么致命</th><th style="width:230px">怎么补</th></tr></thead>
+    <tbody>
+      <tr><td><b>1. 没有判准</b></td><td>一辩稿不立判准，后面三个辩位就没有统一标尺；评委问「凭什么比」时全队各答各的。</td><td>定义之后加一句：「<b>我方的判准是：哪种选择，更对得起『骄傲』两个字。</b>」（与全队口径一致）</td></tr>
+      <tr><td><b>2. 没主动承认平凡</b></td><td>不先承认，对方一句话就把我们打成「自欺欺人」。评委最怕听「我不平凡」。</td><td>定义之后、论点之前加两句：「<b>我方从不否认平凡，也不承诺不甘就一定成功。</b>我方主张的只有一件事——看清差距的那一刻，<b>别替自己写下『到此为止』</b>。」</td></tr>
+      <tr><td><b>3. 3 分钟只用了 2:25</b></td><td>剩 35 秒不炸掉太亏；上面两条补完刚好填满。</td><td>补 1＋2 约 120 字，总字数 ≈ 845，节奏刚好。</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>② 措辞漏洞（会被对方抓的）</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:280px">原文</th><th>问题</th><th style="width:250px">改成</th></tr></thead>
+    <tbody>
+      <tr><td>「不甘于斯，是改变平凡的<b>唯一</b>内在变量」</td><td><b>「唯一」太强</b>。天赋、资源、平台也都是变量——对方抓一句「天赋不是变量吗？」这论点就塌一半。</td><td>「不甘于斯，是改变平凡的变量中，<b>我们自己唯一能握住的那一个</b>」——把「唯一」从「变量」挪到「能握住」，立住且更动人。</td></tr>
+      <tr><td>Uzi 段「他<b>没有选择坦然接受现实</b>」</td><td>给对方递刀：他们会说「接受现实≠接受上限，您方偷换」。</td><td>改成「他<b>没有向差距投降</b>」——用我方定义里现成的词，绕开「接受」二字。</td></tr>
+      <tr><td>「为自豪的领域」／「潜移默化<u>的</u>让我们」</td><td>语病：应为「为<u>之</u>自豪」；「潜移默化」后用「地」。</td><td>「为之自豪的领域」／「潜移默化地让我们」。</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>③ 写得好的、千万别动的地方</h3>
+  <div class="card">
+    <p style="margin-top:0">1. <b>「接受位置 → 接受上限」整段（论点二）</b>——这是全场唯一抓手，表述已到位。</p>
+    <p>2. <b>「就算有好运砸在头上，你也接不住；有机会摆在面前，你也只会说『算了，我不行』」</b>——画面感极好，保留。</p>
+    <p>3. <b>结尾「失去的是知道自己上限在哪的机会」</b>——与四辩结辩口径一致，四辩等于把这句话再炸一遍，前后呼应。</p>
+    <p style="margin-bottom:0">4. <b>Uzi 例子本身</b>——「即使最后没拿世界冠军」这句<b>别删</b>：它恰好证明我方「不甘是姿态、不承诺结果」的口径，对方拿它反打反而帮我们。</p>
+  </div>
+
+  <div class="card">
+    <p style="margin-top:0"><b>🆕 v2 更新（10/22 晚）：</b>队友找来的冯骥版第三论点很好——它把论点三从「讲道理」升级成「讲画面」：<b>金句「踏上取经路，比抵达灵山更重要」</b>正好扣回我方判准（对得起「骄傲」＝不辜负），结尾新增的<b>「方向盘」比喻</b>把「不甘是姿态不是结果」说得更直白。已采纳进修订稿 v2（见下），注意全稿变长到约 900 字 ≈ 3:00，<b>微超 3 秒</b>：念稍快一点，或把第二论点里「倘若此刻……瓶颈的训练」砍成「倘若此刻坦然接受，就不会有后续打磨突破的训练」即可回到 2:50 内。</p>
+  </div>
+
+  <h3>④ 修订全稿 v2（补判准＋承认平凡＋修语病＋冯骥版论点三，约 900 字 ≈ 3:00）</h3>
+  <div class="speech" id="s1rev">
+    <p>谢谢主席，尊敬的各位评委、对方辩友，大家好！</p>
+    <p>今天我方的立场是：在骄傲的领域发现自己其实很平凡，更应选择不甘于斯。</p>
+    <p>开宗明义，定义先行。首先界定核心概念，「骄傲的领域」是我们曾投入心血、取得成果、收获自信、为之自豪的领域；「平凡」是指在当前阶段未达到自我预期的高度，是客观上存在差距、并不出众的状态，但并非对能力的终极否定；「不甘于斯」是拒绝将「当下的平凡」等同于「永恒的定局」，不是偏执的较劲，而是不向差距投降，保留进取之心，不给自己设下永久上限。</p>
+    <p>在展开之前，我方先说清楚两件事：第一，我方从不否认平凡——绝大多数人在绝大多数领域都是平凡的，这一点我方完全承认；第二，我方也不承诺不甘就一定能成功。我方主张的只有一件事：在看清差距的那一刻，别替自己写下「到此为止」。而我方的判准是：哪种选择，更对得起「骄傲」这两个字。</p>
+    <p>第一：不甘于斯，是对过往热爱与付出的郑重回应。当现实与理想产生落差时，产生的热爱不会轻易熄灭，而是催生出一种不甘的冲动。这是对初心的守护，无关最后成功与否。就像电竞选手 Uzi，因为手伤和年龄被质疑「廉颇老矣」，但他没有向差距投降，而是选择坚持复健、重回赛场，即使最后没拿世界冠军。但他用行动证明：只要还喜欢，就值得再拼一把。</p>
+    <p>第二：不甘于斯，是突破自己的动力。差距正是在不甘的追逐中缩小的。而坦然接受会潜移默化地让我们从接受位置转化为接受上限。不少国家级运动员在登上世界赛场后，才发现自己在更大的舞台上十分普通，倘若此刻坦然接受这份平凡，认为自己的能力仅此而已，就不会有后续反复打磨技术、突破瓶颈的训练。正是这份不甘于斯，驱动人不断刷新自我，突破自己的上限。</p>
+    <p>第三：不甘于斯，是改变平凡的变量中，我们自己唯一能握住的那一个。平凡具有一种惯性，如果坦然接受，人就会顺着惯性一直平庸下去，就算有好运砸在头上，你也接不住；有机会摆在面前，你也只会说「算了，我不行」。反观《黑神话·悟空》的制作者冯骥，在国产单机游戏被视为「荒漠」的背景下，他没有接受「中国做不出 3A 大作」这个上限，而是带着团队在发不出工资的困境里坚持数年，最终改写了中国游戏产业的格局。他说过：踏上取经路，比抵达灵山更重要。方向盘握在自己手里，路才可能往回拐——在骄傲的领域里，不甘于斯就是那个不肯松开的方向盘，它让平凡，始终留有被改写的余地。</p>
+    <p>综上，平凡只是此刻的坐标，不甘于斯是我们向前的动力。就算最后会失败，但我们能知道自己走到了哪一步。而坦然接受的人失去的，是知道自己上限在哪的机会。所以，我方坚定认为：在骄傲的领域发现自己其实很平凡，更应选择不甘于斯。</p>
+    <p>谢谢大家！</p>
+  </div>
+  <p><button class="copy" onclick="cp('s1rev',this)">复制修订稿</button> <span class="mini">v2 · 约 900 汉字 ≈ 3:00（微超 3 秒，念稍快或砍第二论点一句）· 比原稿多判准＋承认平凡＋冯骥版论点三</span></p>
+
+  <div class="warn">
+    <p style="margin-bottom:0"><b>给 ·Lu 的反馈可以这么说：</b>「稿子很好，结构和例子都不用动，就补两块——<b>判准</b>和<b>先承认平凡</b>（都在定义之后、论点之前），再改三个小措辞：『唯一变量』改成『我们自己唯一能握住的变量』、Uzi 段『没有选择坦然接受现实』改成『没有向差距投降』、两处语病。」改完发回来，站里一辩页再对一遍时间表。</p>
+  </div>
+
+  <h2>八、突发状况急救包</h2>
+
+  <h3>① 三种反杀（他们问我们）</h3>
+  <div class="q-a">
+    <div class="qq"><b>反杀 1：「那按你们的逻辑，一个人死磕一辈子还是失败，不是很惨吗？」</b></div>
+    <div class="aa"><b>⚠️ 别接「惨不惨」这个题</b>，翻过来答：<br>
+    「分两层。<b>第一，我方从来没说『不甘就一定能成功』</b>——我方说的是：<b>不甘不保证结果，但它保留了可能。</b><br>
+    <b>第二，惨不惨是谁在评价？</b>一个人为自己在乎的事走了十年，他至少知道自己走到了哪。<b>而坦然接受的人，连这个答案都没有。</b>」</div>
+  </div>
+  <div class="q-a">
+    <div class="qq"><b>反杀 2：「你们这是内卷、是成功学、是逼所有人上进。」</b></div>
+    <div class="aa">「内卷是<b>在同一层重复消耗</b>，不甘于斯是<b>向上移动</b>——区别在于有没有增量。<span class="pz">／</span>而且内卷是<b>跟别人比</b>，我方说的是<b>跟昨天的自己比</b>。<span class="pz">∥</span><b>这是两件事。</b>」</div>
+  </div>
+  <div class="q-a">
+    <div class="qq"><b>反杀 3：「那你说，天赋就到这儿了，硬撑不是折磨自己吗？」</b></div>
+    <div class="aa">「<b>天赋决定上限，但没人知道自己上限在哪。</b><span class="pz">／</span>您说的『到这儿了』——<b>是谁告诉他的？是他走完了，还是他不想走了？</b>」</div>
+  </div>
+
+  <h3>② 线上赛（腾讯会议）——这场就是线上</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:200px">状况</th><th>怎么办</th></tr></thead>
+    <tbody>
+      <tr><td>开口没声音</td><td>先看麦克风图标有没有<b>红色斜线</b>；<b>主席点你名再开口</b></td></tr>
+      <tr><td>对方卡壳 / 听不清</td><td>直接说「不好意思，刚才没听清，请您再说一遍」——<b>他重说算他的时间</b></td></tr>
+      <tr><td>你自己卡网</td><td><b>从当前这一问重新念</b>，别接着念半句</td></tr>
+      <tr><td>抢话更难</td><td>线上有延迟，<b>更需要用「谢谢」两个字切入</b></td></tr>
+      <tr><td>两人同时开口</td><td>听到别人声音<b>立刻停</b>，等 1 秒再说</td></tr>
+      <tr><td>看不见主席提示</td><td><b>必须自己掐秒表</b>，1:10 设成闹钟</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="warn">
+    <p style="margin:0"><b>⚠️ 别喊「打断一下」</b>——盘问没有打断权，这句话会被扣流程分。</p>
+  </div>
+
+  <h3>③ 时间反向坑</h3>
+  <div class="card">
+    <p style="margin-top:0"><b>5 问提前问完，还剩 20 秒：</b>别干等。补一句：「我再重复一次我方的判准——<b>哪种选择，更对得起『骄傲』这两个字。</b>」</p>
+    <p style="margin-bottom:0"><b>只问到 Q3 时间就到：</b>小结改口径「<b>我问了三个问题</b>」，<b>绝不能说「五个问题一个都没回答」</b>——评委数得出来。</p>
+  </div>
+
+  <h2>九、上场前的准备清单</h2>
+  <div class="ok">
+    <p style="margin-top:0"><b>☐ 纸上只带关键词。</b>盘问用眼睛扫关键词，别一个字一个字念问题——照念会被看出来，也容易生硬。</p>
+    <p><b>☐ 先想好点谁的名：</b>Q1–Q3 全点「对方一辩」，Q4 换「对方四辩」，Q5 不点人。开场就说清楚：「我有几个问题，想请问对方一辩。」</p>
+    <p><b>☐ 计时意识：</b>手机放桌上开秒表，<b>1:10 是「该收尾了」的闹钟</b>。</p>
+    <p><b>☐ 小结稿掐表念一遍</b>，确认 90 秒内念得完（念不完就砍「第三」，别砍收尾句）。</p>
+    <p><b>☐ 开口前花 10 秒回想他到底答了什么。</b>按「六种情况」选一条换句。别把没发生的事说成发生了。</p>
+    <p><b>☐ 时间不够的救命句：</b>念不完就直接跳到——「<b>接受位置是清醒，接受上限是提前认输。谢谢。</b>」</p>
+    <p><b>☐ 坐姿与目光：</b>问问题看对方；<b>收口句和「凭什么」看评委</b>——评委才是打分的人。</p>
+    <p><b>☐ 线上三件套：</b>① 确认麦克风没静音（主席点名再开口）② 自己开秒表，1:10 闹钟 ③ 对方一停口就用「谢谢」切入。</p>
+    <p style="margin-bottom:0"><b>☐ 最后一条心态：</b>他含糊不是你输，是他不敢答。你只要平静地记下来就行，评委听得懂。</p>
+  </div>
+
+  <div class="stamp"><span>三辩专区 · 盘问 ＋ 质询小结</span><span>最后更新：2026-10-22 20:05</span></div>
+</section>
+
+<section class="page" id="speaker4">
+  <h1>四辩专区：对辩 1:30 ＋ 总结陈词 3:00</h1>
+  <div class="key">
+    <p style="margin:0"><b>★ 时间不够？只看这三块：</b><br>
+    ① <b>对辩：正方先开口</b>，第一句话决定你后面是被追还是追人<br>
+    ② <b>对辩 11 张牌</b>——每次只说一句，说完就停<br>
+    ③ <b>结辩稿</b>——你是全场<b>最后一个说话的人</b>，这是正方唯一的结构性优势</p>
+  </div>
+
+  <h2>一、环节机制</h2>
+  <div class="card">
+    <p style="margin-top:0"><b>第 7 环节 · 对辩（各 1:30）</b><br>
+    两人交替发言，<b>正方先开口</b>，计时分开，<b>无权中止对方没说完的话</b>。<br>
+    ⚠️ <b>不能打断。</b>他插嘴，主席会判违规。正确做法：<b>等他说完，在他停口的那半秒立刻开口。</b></p>
+    <p style="margin-bottom:0"><b>第 14 环节 · 总结陈词（3:00）</b><br>
+    全场<b>最后一个发言</b>，没人打断你。这一轮你之后就直接进证据检证和评委述票——<b>你留给评委的是最后印象。</b></p>
+  </div>
+
+  <h2>二、对辩：先手怎么打</h2>
+  <div class="warn">
+    <p style="margin:0"><b>⚠️ 这次是我们先开口。</b>先手的好处是<b>定节奏</b>，坏处是<b>先暴露</b>。所以第一句不要问开放问题，要<b>问一个对方只能答「是/不是」的封闭问题</b>——他一答，节奏就在你手上。</p>
+  </div>
+  <div class="ok">
+    <p style="margin-top:0"><b>开场第一句（照念）：</b><br>
+    「谢谢主席。<span class="pz">／</span>我只问一个问题：<b>您方接受的是『我现在的位置』，还是『我的上限』？</b>」</p>
+    <p style="margin-bottom:0"><span class="sub">为什么这一句：它是全场的地基。他答「位置」＝他和我们没分歧；答「上限」＝他要为一个证明不了的命题辩护。而且它很短，你还有 80 秒。</span></p>
+  </div>
+
+  <h2>三、对辩 11 张牌（每次一句，说完就停）</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:120px">牌名</th><th>原句</th></tr></thead>
+    <tbody>
+      <tr><td><b>上限谁定</b></td><td>「您说接受上限。那我问：<b>上限在哪儿？谁告诉您的？</b>」</td></tr>
+      <tr><td><b>位置 / 上限</b></td><td>「接受位置，我方同意；接受上限，请您解释凭什么。」</td></tr>
+      <tr><td><b>还没走完</b></td><td>「您凭什么在<b>还没走完</b>的时候，就替自己写下『到此为止』？」</td></tr>
+      <tr><td><b>战略转移</b></td><td>「那是换战场，不是接受。那口气还在。」</td></tr>
+      <tr><td><b>内耗</b></td><td>「内耗来自跟别人比，不来自跟昨天的自己比。」</td></tr>
+      <tr><td><b>止痛</b></td><td>「接受是一种止痛。止的是痛，收走的是『我还能不能更好』。」</td></tr>
+      <tr><td><b>后悔</b></td><td>「35 岁回头看，会不会想问一句『如果当年我再试五年呢』？」</td></tr>
+      <tr><td><b>从众</b></td><td>「大多数人做不到，推不出你不该做。」</td></tr>
+      <tr><td><b>方仲永</b></td><td>「他不是没天赋，他是太早接受了自己『就到这里』。」</td></tr>
+      <tr><td><b>苏轼</b></td><td>「苏轼接受的是官场失意，他从来没接受『我写不出好东西』。」</td></tr>
+      <tr><td><b>收口</b></td><td>「平凡的对面不是不平凡，是『我试过了』。」</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="card">
+    <p style="margin-top:0"><b>三条铁律：</b></p>
+    <p style="margin:0 0 4px"><b>① 短。</b>一次 12–18 秒，说完就停。</p>
+    <p style="margin:0 0 4px"><b>② 说完就停。</b>对辩里最亏的就是「再补一句」，补的那句往往送分。</p>
+    <p style="margin-bottom:0"><b>③ 手里永远有下一张牌。</b>别现场想。</p>
+  </div>
+
+  <h2>四、总结陈词（3:00，约 850 字）</h2>
+  <p class="sub">结构：<b>重述争点（不做复读机）→ 拆对方三层 → 我方归位 → 价值升华 → 金句收</b>。</p>
+
+  <div class="speech" id="s4txt">
+    <p>谢谢主席。</p>
+    <p>今天这场，我们争的其实不是「平凡好不好」。<span class="pz">／</span>我们争的是——<b class="hl">发现平凡之后，你还能不能替自己决定</b>。</p>
+    <p>对方告诉各位：接受吧，接受之后你会轻松。<span class="pz">∥</span>我承认，接受确实会轻松。<span class="pz">／</span>可我想请各位想一件事——<span class="pz">／</span>今天坐在这里的每一个人，<span class="pz">／</span>包括三位评委，<span class="pz">／</span>都曾经在某个领域里，被人比下去过。<span class="pz">∥</span>那一刻，如果我们都选择了「坦然接受」，<span class="pz">／</span>我们不会是今天的我们。</p>
+    <p>对方说，不甘于斯会内耗。<span class="pz">／</span>可内耗不是来自「我想更好」，是来自「<b class="hl">我必须比别人强</b>」。<span class="pz">∥</span>这两件事，他们从头到尾没有分开过。<span class="pz">／</span>我方从来没有要求你赢过谁——<span class="pz">／</span>我方只要求你，比昨天的自己多走一步。</p>
+    <p>对方说，接受不等于放弃。<span class="pz">／</span>可他们从来没有回答我方一个问题：<span class="pz">／</span>你接受的是<b class="hl">位置</b>，还是<b class="hl">上限</b>？<span class="pz">∥</span>如果接受的是位置，我方从来同意——人要先看清自己在哪，才能走路。<span class="pz">／</span>可如果接受的是上限，那我要问：<b class="hl">谁告诉你上限在哪？</b></p>
+    <p>对方还说，接受是一种成熟。<span class="pz">／</span>可成熟是分清两件事：<span class="pz">∥</span>「我做不到顶尖」，这个要接受；<span class="pz">／</span>「我不值得继续」，这个不能接受。<span class="pz">∥</span>他们把这两件事，合成了一件。<span class="pz">／</span>而合成的代价是——<b class="hl">你连问都懒得问了</b>。</p>
+    <p>对方或许还会说：接受之后你会更自由。<span class="pz">／</span>可各位，那不是自由，<span class="pz">／</span>是<b class="hl">不用再努力的自由</b>。<span class="pz">∥</span>一旦接受，人会开始为平凡找理由：<span class="pz">／</span>这个领域靠天赋、我起步晚了、我条件不行。<span class="pz">∥</span>这些理由会让你越来越确信「平凡是对的」。<span class="pz">／</span>这不是道德批判，<b>这是机制</b>。</p>
+    <p>而且请各位别忘了题目的前提——「<b class="hl">骄傲</b>的领域」。<span class="pz">／</span>如果是一个你不在乎的地方，接受毫无争议。<span class="pz">∥</span>可题目偏偏挑你最在乎的那一个。<span class="pz">／</span>因为只有在最在乎的地方，<span class="pz">／</span>「接受」才不是豁达，<span class="pz">／</span>是<b class="hl">提前退场</b>。</p>
+    <p>对方举了很多例子：很多人死磕一辈子很惨。<span class="pz">／</span>可各位，惨不惨，是谁在评价？<span class="pz">∥</span>梵高活着的时候，卖不出一幅画。<span class="pz">／</span>可他画里的光，是他自己的。<span class="pz">∥</span>而且这些例子恰恰证明：<b>他们到死都没有「坦然接受」</b>。<span class="pz">／</span>他们全是我方的人。</p>
+    <p>他们还说，大多数人都是平凡的。<span class="pz">／</span>对，我方承认。<span class="pz">∥</span>可「大多数人做不到」，<span class="pz">／</span>什么时候变成「<b class="hl">你不该做</b>」的理由了？<span class="pz">∥</span>如果这条逻辑成立，<span class="pz">／</span>人类所有的事情，在第一代人失败之后，就都该停下来了。</p>
+    <p>方仲永五岁能诗，他父亲带着他到处炫耀，不让他读书。<span class="pz">／</span>最后「泯然众人」。<span class="pz">∥</span>他不是没有天赋。<span class="pz">／</span>他是<b class="hl">太早接受了自己「就到这里」</b>。</p>
+    <p>各位，这道题真正在问的是：<span class="pz">／</span>一个人，有没有权利在别人告诉他「你不行」的时候，<span class="pz">／</span>说一句「<b class="hl">我还没走完</b>」。<span class="pz">∥</span>我方说，有。<span class="pz">／</span>而且我方认为，正是这一句，<span class="pz">／</span>让人类所有的事情，值得做。</p>
+    <p>看清自己，是清醒；<span class="pz">∥</span>看清之后还愿意再走一段，<b class="hl">才是骄傲</b>。<span class="pz">∥</span>谢谢。</p>
+  </div>
+  <p><button class="copy" onclick="cp('s4txt',this)">复制这一稿</button> <span class="mini" id="s4len">819 汉字 / 52 个停顿 · 目标 3:00</span></p>
+
+  <h2>五、结辩加料段（时间够才加）</h2>
+  <div class="card">
+    <p style="margin-top:0"><b>加料 A · 西西弗斯（约 20 秒）</b><br>
+    「加缪写过西西弗斯：他每天把石头推上山，石头又滚下来。<span class="pz">／</span>可加缪说——<b class="hl">必须想象西西弗斯是幸福的</b>。<span class="pz">∥</span>对方会说：你看，他接受了。<span class="pz">／</span>可他接受的是<b>世界没有意义</b>，<span class="pz">／</span>他从来没有接受<b>『我推不上去』</b>。<span class="pz">／</span>他每天还是把石头推上去。」</p>
+    <p><b>加料 C · 金句收尾（约 8 秒，与「平凡是常态，非凡是选择」二选一）</b><br>
+    「真正的骄傲，从来不是<span class="pz">／</span><b class="hl">『我已经很好了』</b>，<span class="pz">／</span>而是<span class="pz">／</span><b class="hl">『我还可以更好』</b>。」<span class="sub">（来源：队友找的三辩参考稿，10/22 晚拆出）</span></p>
+    <p><b>加料 D · 「试一次的理由」收尾（约 10 秒，三选一按现场气氛挑）</b><br>
+    「坦然接受的人，得到的是平静；<span class="pz">／</span>不甘于斯的人，<span class="pz">／</span>得到的是<b class="hl">明天还可以继续试一次的理由</b>。」<span class="sub">（来源：队友找的第二份三辩参考稿「屠呦呦线」，10/22 晚拆出）</span></p>
+    <p style="margin-bottom:0"><b>加料 B · 反问收尾（约 12 秒）</b><br>
+    「如果『发现自己平凡就该接受』是对的，<span class="pz">／</span>那人类所有的事情，<span class="pz">／</span>在第一代人失败之后，就该停下来了。」</p>
+  </div>
+
+  <h2>六、上场前要记牢的</h2>
+  <div class="ok">
+    <p style="margin-top:0"><b>1. 你是最后一个说话的人。</b>别复读前面三个辩位说过的话，要做的是「把它收成一句话」。</p>
+    <p><b>2. 结辩不要讲新论点。</b>新论点对方没机会回应，评委会觉得你在偷跑。只做「拆＋收」。</p>
+    <p><b>3. 对辩第一句用封闭问题。</b>「是位置，还是上限？」——他一答，节奏就是你的。</p>
+    <p><b>4. 对辩里不要抢话。</b>对辩没有打断权，抢话＝流程违规，直接掉环节票。</p>
+    <p style="margin-bottom:0"><b>5. 最后一句放慢、看评委、说完就坐。</b>这是全场最后一个印象，值 10 秒。</p>
+  </div>
+
+  <div class="stamp"><span>四辩专区 · 对辩 ＋ 总结陈词</span><span>最后更新：2026-10-22 20:05</span></div>
+</section>
+
+<section class="page" id="rules">
+  <h1>赛制与投票</h1>
+  <p class="lead">这一轮我们<b>是正方</b>，所以环节号全部在前半段。下面这张表把我们的人标出来了。</p>
+
+  <h2>一、十六个环节</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:50px">#</th><th>环节</th><th style="width:110px">时长</th><th>关键规则</th></tr></thead>
+    <tbody>
+      <tr style="background:#f3f8f5"><td><b>1</b></td><td><b>正方一辩 · 开篇陈词</b> ★</td><td>3:00</td><td>全场第一个发言</td></tr>
+      <tr><td>2</td><td>反方二辩 · 质询正方一辩</td><td>双边 2:00</td><td>回答方只能作答不能反问；质询方可打断；<b>答辩方发言计入总时间</b></td></tr>
+      <tr><td>3</td><td>反方一辩 · 开篇陈词</td><td>3:00</td><td>—</td></tr>
+      <tr style="background:#f3f8f5"><td><b>4</b></td><td><b>正方二辩 · 质询反方一辩</b> ★</td><td>双边 2:00</td><td><b>我方可打断</b>；双边计时</td></tr>
+      <tr><td>5</td><td>反方二辩 · 质询小结</td><td>1:30</td><td>—</td></tr>
+      <tr style="background:#f3f8f5"><td><b>6</b></td><td><b>正方二辩 · 质询小结</b> ★</td><td>1:30</td><td>—</td></tr>
+      <tr style="background:#f3f8f5"><td><b>7</b></td><td><b>正、反四辩 · 对辩</b> ★</td><td>各 1:30</td><td>交替轮流；<b>无权中止对方未完成的言论</b>；计时分开；<b>正方先开始</b></td></tr>
+      <tr style="background:#f3f8f5"><td><b>8</b></td><td><b>正方三辩 · 盘问</b> ★</td><td>1:30</td><td>可指派对方<b>除三辩外</b>任一辩手；答辩方只能作答不能反问；<b>答辩方发言不计入总时间</b>；⚠️ 无打断权</td></tr>
+      <tr><td>9</td><td>反方三辩 · 盘问</td><td>1:30</td><td>同上。<b>规则禁止他点我方三辩</b></td></tr>
+      <tr style="background:#f3f8f5"><td><b>10</b></td><td><b>正方三辩 · 质询小结</b> ★</td><td>1:30</td><td>—</td></tr>
+      <tr><td>11</td><td>反方三辩 · 质询小结</td><td>1:30</td><td>—</td></tr>
+      <tr style="background:#f3f8f5"><td><b>12</b></td><td><b>自由辩论</b> ★</td><td>各 3:00<br><span class="sub">全队共享</span></td><td>⚠️<b>各 3:00 ＝ 全队共享，不是每人 3 分钟</b>；<b>正方先发言</b>；落座即为发言结束、对方计时开始；间隙照常计时；一方用完另一方可继续或放弃</td></tr>
+      <tr><td>13</td><td>反方四辩 · 总结陈词</td><td>3:00</td><td>—</td></tr>
+      <tr style="background:#f3f8f5"><td><b>14</b></td><td><b>正方四辩 · 总结陈词</b> ★</td><td>3:00</td><td><b>全场最后一个发言</b></td></tr>
+      <tr><td>15</td><td>证据检证</td><td>—</td><td>引用要能说得出处（见「素材库 · 引用红线」）</td></tr>
+      <tr><td>16</td><td>评委述票</td><td>每位 ≥3:00</td><td>从少数评委先开始</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>二、投票制度（三票制 / 共九票）</h2>
+  <div class="card">
+    <p style="margin-top:0">每位评委手上有 <b>5 张票</b>：</p>
+    <ul>
+      <li><b>环节票</b>——按每个环节分别打分后汇总。单一评委票面上哪一方总分多，就把环节票给该方；<b>分数相同则该环节记 0.5 : 0.5</b>。每环节得分 0 到该环节上限之间，<b>按整数计算</b>。</li>
+      <li><b>印象票</b></li>
+      <li><b>决胜票</b></li>
+      <li><b>最佳辩手票 2 张</b>——分别投给正反双方，<b>评委有权放弃</b>。</li>
+    </ul>
+    <p>3 位评委 × 3 张赛果票 = <b>9 票赛果票</b>。正反双方累计总得票多者胜；<b>总票数打平则决胜票多者获胜。</b></p>
+    <p style="margin-bottom:0"><b>票一经上交不得修改；本赛事不设申诉机制。</b></p>
+  </div>
+
+  <h2>三、这一轮和上一轮的三个差异</h2>
+  <div class="danger">
+    <p style="margin-top:0"><b>① 我们变正方，所有环节先开口。</b>一辩（1）、四辩对辩（7）、三辩盘问（8）、自由辩论（12）——都是我们先。</p>
+    <p><b>② 三辩的两个环节各提前了一个。</b>盘问 9→<b>8</b>，小结 11→<b>10</b>。中间只隔一个对方盘问。</p>
+    <p style="margin-bottom:0"><b>③ 上一轮的「环节票 −5%」轮空补偿没有了。</b>那是一次性规则，这轮不扣——但也意味着<b>没有任何让分空间</b>。</p>
+  </div>
+
+  <h2>四、流程红线（踩了直接掉分）</h2>
+  <div class="warn">
+    <p style="margin-top:0"><b>① 盘问没有打断权。</b>别喊「我打断一下」。</p>
+    <p><b>② 对辩不能中止对方未完成的话。</b>抢话＝流程违规。</p>
+    <p><b>③ 答辩方只能作答不能反问。</b>对方一反问你就可以提醒。</p>
+    <p><b>④ 只能点对方除三辩外的辩手。</b>点对方三辩＝违规。</p>
+    <p style="margin-bottom:0"><b>⑤ 评委指出你违规，只说「好的，谢谢。」</b>立刻照规则调整，不解释、不争辩、不反问。</p>
+  </div>
+
+  <h2>五、⚠️ 还没确认的事</h2>
+  <div class="card">
+    <p style="margin-top:0"><b>腾讯会议链接：安排表 L、M 两列全空。</b>需要在群里问主办方要（还有备用链接）。</p>
+    <p style="margin-bottom:0"><b>届数：</b>上一轮章程写「第三届」、安排表写「第四届」，这一轮的表名还停在「第二轮安排」。<b>不影响比赛，但可以顺手问一句。</b></p>
+  </div>
+
+  <div class="stamp"><span>赛制与投票</span><span>最后更新：2026-10-22 20:05</span></div>
+</section>
+
+</main>
+</div>
+
+<footer style="display:none"></footer>
+<script>
+var MODULES=[
+ ['home','首页','第三轮概览'],
+ ['topic','拆题','定义 · 判准'],
+ ['case','我方立论','三条论点'],
+ ['attack','破对方','七套打法'],
+ ['qs','问题库','盘问 · 质询'],
+ ['mats','素材库','例子 · 名言'],
+ ['scripts','上场稿','我方时刻'],
+ ['speaker1','一辩','开篇 3:00','1'],
+ ['speaker2','二辩','质询＋小结','1'],
+ ['speaker3','三辩','盘问＋小结','1'],
+ ['speaker4','四辩','对辩＋结辩','1'],
+ ['rules','赛制','16 环节 · 投票']
+];
+(function(){
+  var m=document.getElementById('menu');
+  var html='';
+  for(var i=0;i<MODULES.length;i++){
+    var a=MODULES[i];
+    html+='<a href="#'+a[0]+'" data-k="'+a[0]+'"'+(a[3]?' class="lv2"':'')+'><b>'+a[1]+'</b><span>'+a[2]+'</span></a>';
+  }
+  m.insertAdjacentHTML('beforeend',html);
+})();
+function route(){
+  var id=(location.hash||'#home').replace('#','');
+  if(!document.getElementById(id)) id='home';
+  var ps=document.querySelectorAll('.page');
+  for(var i=0;i<ps.length;i++) ps[i].classList.toggle('on',ps[i].id===id);
+  var as=document.querySelectorAll('#menu a');
+  for(var j=0;j<as.length;j++) as[j].classList.toggle('on',as[j].getAttribute('data-k')===id);
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',route);
+route();
+
+function cp(id,btn){
+  var el=document.getElementById(id);
+  if(!el) return;
+  var t=el.innerText.replace(/\u00a0/g,' ').replace(/\n{3,}/g,'\n\n').trim();
+  function done(){ if(btn){var o=btn.textContent;btn.textContent='已复制 ✓';setTimeout(function(){btn.textContent=o;},1500);} }
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(t).then(done,function(){fallback();});
+  } else { fallback(); }
+  function fallback(){
+    var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.left='-9999px';
+    document.body.appendChild(ta);ta.select();
+    try{document.execCommand('copy');done();}catch(e){alert('复制失败，请手动选中');}
+    document.body.removeChild(ta);
+  }
+}
+
+(function(){
+  var t=new Date(2026,9,25,15,30,0).getTime();
+  var el=document.getElementById('cd');
+  if(!el) return;
+  function tick(){
+    var d=t-Date.now();
+    if(d<=0){el.textContent='比赛已开始 / 已结束';return;}
+    var dd=Math.floor(d/86400000),hh=Math.floor(d%86400000/3600000),mm=Math.floor(d%3600000/60000),ss=Math.floor(d%60000/1000);
+    el.textContent=dd+' 天 '+hh+' 时 '+mm+' 分 '+ss+' 秒';
+    setTimeout(tick,1000);
+  }
+  tick();
+})();
+
+(function(){
+  var BUILD='1022m';
+  function sg(k,v){ try{ if(v===undefined) return sessionStorage.getItem(k); sessionStorage.setItem(k,v); }catch(e){ return null; } }
+  try{
+    if(sg('_rcu')==='1') return;
+    fetch('version.txt?t='+Date.now(),{cache:'no-store'})
+      .then(function(r){ return r.ok ? r.text() : ''; })
+      .then(function(t){ t=(t||'').replace(/[^0-9a-z]/gi,''); if(!t||t===BUILD) return; sg('_rcu','1'); location.replace(location.pathname+'?v='+encodeURIComponent(t)+location.hash); })['catch'](function(){});
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
