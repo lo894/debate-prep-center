@@ -28,6 +28,34 @@ a:hover{text-decoration:underline}
 #menu a.on{background:var(--accbg)}
 #menu a.on b{color:var(--acc2);font-weight:600}
 #menu a.lv2{padding-left:24px}
+/* 短屏适配：侧栏 12 项总高约 737px，窗口一矮，三辩／四辩就被挤到折叠线以下，看着像“点不开” */
+#menu{scrollbar-width:thin;scrollbar-color:#d8d3c8 transparent}
+#menu::-webkit-scrollbar{width:7px}
+#menu::-webkit-scrollbar-thumb{background:#d8d3c8;border-radius:4px}
+#menu::-webkit-scrollbar-track{background:transparent}
+@media (min-width:901px) and (max-height:790px){
+  #menu{padding:12px 10px 18px}
+  #menu .brand{padding:0 10px 2px}
+  #menu .brand2{padding:0 10px 10px;font-size:14px}
+  #menu a{padding:5px 10px}
+  #menu a b{font-size:13.5px}
+  #menu a span{font-size:10.5px;margin-top:1px}
+  #menu a.lv2{padding-left:20px}
+}
+@media (min-width:901px) and (max-height:670px){
+  #menu{padding:10px 10px 14px}
+  #menu .brand2{padding:0 10px 6px;font-size:13.5px}
+  #menu a{padding:4px 10px}
+  #menu a b{font-size:13px}
+  #menu a span{display:none}
+  #menu a.lv2{padding-left:18px}
+}
+@media (min-width:901px) and (max-height:560px){
+  #menu{padding:8px 8px 10px}
+  #menu .brand{display:none}
+  #menu a{padding:3px 9px}
+  #menu a b{font-size:12.5px}
+}
 #menu a.lv2 b{font-size:13px}
 main{flex:1;min-width:0;padding:34px 40px 90px;max-width:1000px}
 .page{display:none;animation:fin .18s ease}
@@ -77,6 +105,7 @@ th{background:#f2f0e9;font-weight:600;font-size:13px}
 .qq{font-size:15.5px;line-height:1.95}
 .aa{margin-top:11px;padding-top:11px;border-top:1px dashed var(--line);font-size:14px;line-height:1.9}
 .idx{display:inline-block;min-width:20px;height:20px;line-height:20px;text-align:center;background:var(--acc);color:#fff;border-radius:6px;font-size:12px;margin-right:7px;font-weight:600}
+.idx.w{width:auto;min-width:20px;padding:0 7px;box-sizing:border-box}
 .pill{display:inline-block;font-size:11.5px;padding:2px 8px;border-radius:20px;background:var(--accbg);color:var(--acc2);border:1px solid var(--accbd);margin-right:5px}
 .pill.red{background:var(--redbg);color:var(--red);border-color:var(--redbd)}
 .pill.amb{background:var(--amberbg);color:var(--amber);border-color:var(--amberbd)}
@@ -1040,7 +1069,16 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 </section>
 
 <section class="page" id="speaker3">
-  <h1>三辩专区（正方 · 被盘 ＋ 盘问 1:30 ＋ 小结 1:30 ＋ 对辩）</h1>
+  <h1>三辩专区（正方 · 被盘 1:30 ＋ 盘问 1:30 ＋ 小结 1:30）</h1>
+
+  <div class="ok">
+    <p style="margin:0 0 6px"><b>先说你到底上几次台（很多人在这里记混）：三次主环节 ＋ 自由辩可参与</b></p>
+    <p style="margin:0 0 6px"><b>① 环节 7 · 被盘 1:30</b>——对方三辩问你，<b>你只答不问</b>（这一环你没有主动权）。<br>
+    <b>② 环节 8 · 盘问 1:30</b>——你问对方，<b>不能打断</b>，问完自己收尾。<br>
+    <b>③ 环节 10 · 小结 1:30</b>——向评委交代刚才那 90 秒的账。</p>
+    <p style="margin:0" class="mini">⚠️ <b>环节 11 的对辩是双方四辩的，不是你</b>（四辩专区的原话：<b>「环节 11 对辩 1:30（双方四辩）」</b>）。到那一环你<b>坐着别起身</b>，起身＝抢位，评委会记一笔。环节 12 自由辩论全队共享时间，你想说才站起来说。<br>
+    <b>一句话记法：7 答、8 问、10 收，11 没你的事。</b></p>
+  </div>
 
   <div class="danger">
     <p style="margin:0 0 8px"><b>🚨 上台前只看这一张，其余全是备份</b></p>
@@ -1073,7 +1111,7 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
     <div class="row"><div class="t">1:05<br>检查点②</div><div class="d"><b>还没进 Q4 → 立刻跳 Q4，再念 Q5。</b>收尾句永远不能被掐掉——它是全场要被记住的那一句。</div></div>
     <div class="row"><div class="t">1:20<br>Q5 收尾</div><div class="d"><b>转身面向评委席</b>，放慢，说完停满两秒，再坐下。<b>宁可提前 10 秒收，也不要被主席打断。</b></div></div>
     <div class="row"><div class="t">环节 10<br>小结 1:30</div><div class="d">站直 →「谢谢主席。」→ <b>先看评委一眼再开口</b>（不是看稿）→ 开头三句按实际情况选（见第五节）→ 主体按稿念 → 最后两句抬头 → 停一下 → 坐下。</div></div>
-    <div class="row"><div class="t">环节 11<br>对辩 1:30</div><div class="d">对方说完<b>先停半秒</b>再接，显得你在听。<b>每轮只回一句</b>，回完就闭嘴。对辩最忌讳「回三句」。</div></div>
+    <div class="row"><div class="t">环节 11<br>四辩对辩</div><div class="d"><b>这一环不是你，坐着别起身。</b>四辩对辩时你要做两件事：<b>帮四辩记对方原话</b>（他结辩要用）、<b>别插话别递纸条出声</b>。你若起身，评委会以为我方抢位。</div></div>
   </div>
 
   <h2>二、三条链（背这三条就够，别背稿）</h2>
@@ -1099,7 +1137,7 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
     </tbody>
   </table>
   </div>
-  <div class="warn"><p style="margin:0"><b>用链顺序：</b>盘问打 <b>①</b> → 小结收 <b>①</b>＋<b>②</b> → 对辩看情况补 <b>③</b>。<b>三条链同一场只用一次，用完就换。</b>同一个东西说三遍，评委会觉得你只有一招。</p></div>
+  <div class="warn"><p style="margin:0"><b>用链顺序：</b>盘问打 <b>①</b> → 小结收 <b>①</b>＋<b>②</b> → 自由辩看情况补 <b>③</b>。<b>三条链同一场只用一次，用完就换。</b>同一个东西说三遍，评委会觉得你只有一招。</p></div>
 
   <h2>三、判准防守（本场新增，必须背）</h2>
   <div class="danger">
@@ -1247,17 +1285,17 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
   </table>
   </div>
 
-  <h3 style="margin:22px 0 6px;font-size:15.5px">C · 小结与对辩（第 10 / 11 环节）</h3>
+  <h3 style="margin:22px 0 6px;font-size:15.5px">C · 小结与自由辩（第 10 / 12 环节）</h3>
   <div class="tw">
   <table class="stack">
     <thead><tr><th style="width:180px">发生什么</th><th>3 秒内做什么</th><th>说什么</th></tr></thead>
     <tbody>
       <tr><td data-l="发生什么"><b>小结发现盘问打砸了</b></td><td data-l="做什么">用第五节 B 或 C 开头，<b>不要硬说「他一个都没答」</b>（评委会记得你问了什么）</td><td data-l="说什么">见第五节对照表</td></tr>
       <tr><td data-l="发生什么"><b>小结念到一半被主席示意超时</b></td><td data-l="做什么"><b>直接跳到收尾两句</b>，中间整段放弃</td><td data-l="说什么">「位置可以认，眼睛不能交。<b>您可以不再追，但不能说没追过。</b>谢谢。」</td></tr>
-      <tr><td data-l="发生什么"><b>对辩对方连珠炮</b></td><td data-l="做什么">抢半句先立框架，不然会被拖进他的问题</td><td data-l="说什么">「<b>我只说一件事——</b>」（然后说完那一件就停）</td></tr>
-      <tr><td data-l="发生什么"><b>对辩被连续追问</b></td><td data-l="做什么">只答最狠那一问，其余打包</td><td data-l="说什么">「这些问题我小结一起答。<b>我先说一句：</b>……」</td></tr>
-      <tr><td data-l="发生什么"><b>对辩对方打人身／嘲讽</b></td><td data-l="做什么">不回应情绪，回应论点</td><td data-l="说什么">「您这句话我不回应。<b>我回应您的论点：</b>……」</td></tr>
-      <tr><td data-l="发生什么"><b>对辩你说错话／口误</b></td><td data-l="做什么"><b>一句改口，不道歉三次</b>（道歉太多会显得心虚）</td><td data-l="说什么">「我换个说法：……」</td></tr>
+      <tr><td data-l="发生什么"><b>自由辩对方连珠炮</b></td><td data-l="做什么">抢半句先立框架，不然会被拖进他的问题</td><td data-l="说什么">「<b>我只说一件事——</b>」（然后说完那一件就停）</td></tr>
+      <tr><td data-l="发生什么"><b>自由辩被连续追问</b></td><td data-l="做什么">只答最狠那一问，其余打包</td><td data-l="说什么">「这些问题我小结一起答。<b>我先说一句：</b>……」</td></tr>
+      <tr><td data-l="发生什么"><b>自由辩对方打人身／嘲讽</b></td><td data-l="做什么">不回应情绪，回应论点</td><td data-l="说什么">「您这句话我不回应。<b>我回应您的论点：</b>……」</td></tr>
+      <tr><td data-l="发生什么"><b>自由辩你说错话／口误</b></td><td data-l="做什么"><b>一句改口，不道歉三次</b>（道歉太多会显得心虚）</td><td data-l="说什么">「我换个说法：……」</td></tr>
     </tbody>
   </table>
   </div>
@@ -1289,7 +1327,7 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
     ✅ 换：「<b>这一点我方不否认。但——</b>」（「不否认」是一个点，「您说得对」是一整片）</p>
   </div>
 
-  <h2>八、对辩七回合（环节 11 · 1:30 · 每轮只回一句）</h2>
+  <h2>八、七句备用回击（自由辩 / 被追问时用 · 每轮只回一句）</h2>
   <div class="tw">
   <table class="stack">
     <thead><tr><th style="width:200px">他说</th><th>你回（说完就闭嘴）</th></tr></thead>
@@ -1305,7 +1343,7 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
   </table>
   </div>
   <div class="warn">
-    <p style="margin:0"><b>对辩被压制时的三招（对方语速快、连问、不给缝）：</b><br>
+    <p style="margin:0"><b>自由辩被压制时的三招（对方语速快、连问、不给缝）：</b><br>
     <b>① 抢半句立框架：</b>「我只说一件事——」（这半句一出，节奏就回到你手上）<br>
     <b>② 只答最狠那一问：</b>「这些我小结一起答。<b>我先说一句：</b>……」<br>
     <b>③ 用停顿压过他：</b>他连说三句，你停满两秒再说一句。<b>在吵闹的场子里，慢的那个人才是主角。</b></p>
@@ -1383,7 +1421,7 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 
   <div class="ok">
     <p style="margin:0 0 8px"><b>✅ 赛前 5 分钟检查清单（照着念一遍，别跳）</b></p>
-    <p style="margin:0 0 5px">① 我是第几个环节？<b>（正方：被盘 7 → 盘问 8 → 小结 10 → 对辩 11）</b></p>
+    <p style="margin:0 0 5px">① 我是第几个环节？<b>（正方：被盘 7 → 盘问 8 → 小结 10；11 对辩是四辩的，我不起身）</b></p>
     <p style="margin:0 0 5px">② 有没有打断权？<b>没有。</b>我能不能点三辩？<b>不能，除三辩外任一人。</b></p>
     <p style="margin:0 0 5px">③ 计时怎么算？<b>我方说话计时，还是双方都计？</b>（不确定就去问主席）</p>
     <p style="margin:0 0 5px">④ 稿子带了吗？<b>A4 一张</b>＋一支笔（记对方用的词，小结 B 版要用）</p>
@@ -1474,10 +1512,29 @@ function route(){
   var ps=document.querySelectorAll('.page');
   for(var i=0;i<ps.length;i++) ps[i].classList.toggle('on',ps[i].id===id);
   var as=document.querySelectorAll('#menu a');
-  for(var j=0;j<as.length;j++) as[j].classList.toggle('on',as[j].getAttribute('data-k')===id);
+  var act=null;
+  for(var j=0;j<as.length;j++){
+    var on=as[j].getAttribute('data-k')===id;
+    as[j].classList.toggle('on',on);
+    if(on) act=as[j];
+  }
+  /* 当前项若被挤到侧栏可视区外，把侧栏自己滚过去（只动侧栏，不动正文） */
+  var m=document.getElementById('menu');
+  if(m&&act&&m.scrollHeight>m.clientHeight+2){
+    var mt=m.getBoundingClientRect().top, ar=act.getBoundingClientRect();
+    if(ar.top<mt+4) m.scrollTop+=ar.top-mt-8;
+    else if(ar.bottom>mt+m.clientHeight-4) m.scrollTop+=ar.bottom-(mt+m.clientHeight)+8;
+  }
   window.scrollTo(0,0);
 }
 window.addEventListener('hashchange',route);
+/* 点同一个 hash 时浏览器不发 hashchange，补一次路由，保证“再点一下回到顶部” */
+document.addEventListener('click',function(e){
+  var a=e.target&&e.target.closest?e.target.closest('a[href^="#"]'):null;
+  if(!a) return;
+  var h=a.getAttribute('href');
+  if(h&&h.length>1&&location.hash===h){ e.preventDefault(); route(); }
+});
 route();
 
 function cp(id,btn){
@@ -1511,7 +1568,7 @@ function cp(id,btn){
 })();
 
 (function(){
-  var BUILD='1106d';
+  var BUILD='1106e';
   function sg(k,v){ try{ if(v===undefined) return sessionStorage.getItem(k); sessionStorage.setItem(k,v); }catch(e){ return null; } }
   try{
     if(sg('_rcu')==='1') return;
